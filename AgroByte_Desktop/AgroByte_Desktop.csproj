@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="Resources\Gradiente2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erase-66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons_X.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
