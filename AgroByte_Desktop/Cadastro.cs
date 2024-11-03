@@ -19,10 +19,7 @@ namespace AgroByte_Desktop
            
         }
 
-        SqlConnection cn = new SqlConnection(@"Data Source=ALBANY;Initial Catalog=Agrobyte;Integrated Security=SSPI;");
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader dt;
-        
+            
 
         private void label1_Click(object sender, EventArgs e)
         {
