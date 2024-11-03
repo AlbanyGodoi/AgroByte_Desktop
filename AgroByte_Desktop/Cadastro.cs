@@ -7,15 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AgroByte_Desktop
 {
-    public partial class Form1 : Form
+    public partial class FrmCadastro : Form
     {
-        public Form1()
+        public FrmCadastro()
         {
             InitializeComponent();
+           
         }
+
+        SqlConnection cn = new SqlConnection(@"Data Source=ALBANY;Initial Catalog=Agrobyte;Integrated Security=SSPI;");
+        SqlCommand cm = new SqlCommand();
+        SqlDataReader dt;
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -44,6 +51,17 @@ namespace AgroByte_Desktop
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void FrmCadastro_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+                e.SuppressKeyPress = true;
+            }
 
         }
     }
