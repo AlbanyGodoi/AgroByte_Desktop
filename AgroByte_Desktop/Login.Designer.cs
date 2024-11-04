@@ -33,6 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonSairAplic = new System.Windows.Forms.Button();
             this.buttonAcessar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonFecharLogin = new System.Windows.Forms.Button();
-            this.buttonSairAplic = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,6 +112,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // buttonSairAplic
+            // 
+            this.buttonSairAplic.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonSairAplic.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSairAplic.Location = new System.Drawing.Point(218, 353);
+            this.buttonSairAplic.Name = "buttonSairAplic";
+            this.buttonSairAplic.Size = new System.Drawing.Size(179, 45);
+            this.buttonSairAplic.TabIndex = 5;
+            this.buttonSairAplic.Text = "Sair";
+            this.buttonSairAplic.UseVisualStyleBackColor = false;
+            this.buttonSairAplic.Click += new System.EventHandler(this.buttonSairAplic_Click);
             // 
             // buttonAcessar
             // 
@@ -203,18 +216,6 @@
             this.buttonFecharLogin.Text = "X";
             this.buttonFecharLogin.UseVisualStyleBackColor = true;
             this.buttonFecharLogin.Click += new System.EventHandler(this.buttonFecharLogin_Click);
-            // 
-            // buttonSairAplic
-            // 
-            this.buttonSairAplic.BackColor = System.Drawing.Color.Goldenrod;
-            this.buttonSairAplic.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSairAplic.Location = new System.Drawing.Point(218, 353);
-            this.buttonSairAplic.Name = "buttonSairAplic";
-            this.buttonSairAplic.Size = new System.Drawing.Size(179, 45);
-            this.buttonSairAplic.TabIndex = 5;
-            this.buttonSairAplic.Text = "Sair";
-            this.buttonSairAplic.UseVisualStyleBackColor = false;
-            this.buttonSairAplic.Click += new System.EventHandler(this.buttonSairAplic_Click);
             // 
             // Login
             // 

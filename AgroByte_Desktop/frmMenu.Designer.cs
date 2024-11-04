@@ -39,6 +39,7 @@
             this.buttonFuncionario = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.principal = new AgroByte_Desktop.principal1();
+            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 675);
+            this.panelMenu.Size = new System.Drawing.Size(220, 548);
             this.panelMenu.TabIndex = 0;
             // 
             // buttonSairAplic1
@@ -65,7 +66,7 @@
             this.buttonSairAplic1.BackColor = System.Drawing.Color.Goldenrod;
             this.buttonSairAplic1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonSairAplic1.Image = global::AgroByte_Desktop.Properties.Resources.icons8_exit_28;
-            this.buttonSairAplic1.Location = new System.Drawing.Point(6, 525);
+            this.buttonSairAplic1.Location = new System.Drawing.Point(3, 488);
             this.buttonSairAplic1.Name = "buttonSairAplic1";
             this.buttonSairAplic1.Size = new System.Drawing.Size(214, 40);
             this.buttonSairAplic1.TabIndex = 8;
@@ -186,16 +187,28 @@
             // 
             // principal
             // 
-            this.principal.Location = new System.Drawing.Point(216, 0);
+            this.principal.Location = new System.Drawing.Point(223, 0);
             this.principal.Name = "principal";
-            this.principal.Size = new System.Drawing.Size(1009, 675);
+            this.principal.Size = new System.Drawing.Size(857, 545);
             this.principal.TabIndex = 1;
+            // 
+            // frmFuncionario1
+            // 
+            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frmFuncionario1.Location = new System.Drawing.Point(223, 0);
+            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(4);
+            this.frmFuncionario1.Name = "frmFuncionario1";
+            this.frmFuncionario1.Size = new System.Drawing.Size(857, 548);
+            this.frmFuncionario1.TabIndex = 2;
+            this.frmFuncionario1.Load += new System.EventHandler(this.frmFuncionario1_Load);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 675);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1079, 548);
+            this.Controls.Add(this.frmFuncionario1);
             this.Controls.Add(this.principal);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmMenu";
@@ -220,5 +233,6 @@
         private System.Windows.Forms.Button buttonCaixa;
         private System.Windows.Forms.Button buttonSairAplic1;
         private principal1 principal;
+        private frmFuncionario frmFuncionario1;
     }
 }

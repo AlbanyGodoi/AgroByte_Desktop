@@ -37,5 +37,10 @@ namespace AgroByte_Desktop
         {
 
         }
+
+        private void frmFuncionario1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
