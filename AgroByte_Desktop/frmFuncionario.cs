@@ -16,5 +16,38 @@ namespace AgroByte_Desktop
         {
             InitializeComponent();
         }
+
+        private void desabilitaCampos() 
+        { 
+            txtNomeFunc.Enabled = false;
+            txtLoginFunc.Enabled = false;
+            txtSenhaFunc.Enabled = false;
+            buttonSalvarFunc.Enabled = false;
+            buttonEditarFunc.Enabled = false;
+            buttonExcluirFunc.Enabled = false;
+            buttonCancelarFunc.Enabled = false;
+        }
+
+        private void habilitaCampos() 
+        {
+            txtNomeFunc.Enabled = true;
+            txtLoginFunc.Enabled = true;
+            txtSenhaFunc.Enabled = true;
+            buttonSalvarFunc.Enabled = true;
+            buttonCancelarFunc.Enabled = true;
+
+
+        }
+
+
+        private void frmFuncionario_Load(object sender, EventArgs e)
+        {
+            desabilitaCampos();
+        }
+
+        private void buttonNovoFunc_Click(object sender, EventArgs e)
+        {
+            habilitaCampos();
+        }
     }
 }

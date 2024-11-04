@@ -1,6 +1,6 @@
 ﻿namespace AgroByte_Desktop
 {
-    partial class principal
+    partial class principal1
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -43,13 +43,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // principal
+            // principal1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
-            this.Name = "principal";
+            this.Name = "principal1";
             this.Size = new System.Drawing.Size(833, 671);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -38,7 +38,7 @@
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.buttonFuncionario = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.principal1 = new AgroByte_Desktop.principal();
+            this.principal = new AgroByte_Desktop.principal1();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 624);
+            this.panelMenu.Size = new System.Drawing.Size(220, 675);
             this.panelMenu.TabIndex = 0;
             // 
             // buttonSairAplic1
@@ -184,23 +184,24 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
-            // principal1
+            // principal
             // 
-            this.principal1.Location = new System.Drawing.Point(226, 0);
-            this.principal1.Name = "principal1";
-            this.principal1.Size = new System.Drawing.Size(811, 624);
-            this.principal1.TabIndex = 1;
+            this.principal.Location = new System.Drawing.Point(216, 0);
+            this.principal.Name = "principal";
+            this.principal.Size = new System.Drawing.Size(1009, 675);
+            this.principal.TabIndex = 1;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 624);
-            this.Controls.Add(this.principal1);
+            this.ClientSize = new System.Drawing.Size(1223, 675);
+            this.Controls.Add(this.principal);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -218,6 +219,6 @@
         private System.Windows.Forms.Button buttonCadCategoria;
         private System.Windows.Forms.Button buttonCaixa;
         private System.Windows.Forms.Button buttonSairAplic1;
-        private principal principal1;
+        private principal1 principal;
     }
 }

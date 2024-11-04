@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AgroByte_Desktop
 {
-    public partial class principal1 : UserControl
+    public partial class Form1 : Form
     {
-        public principal1()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

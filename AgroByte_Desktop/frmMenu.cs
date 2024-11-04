@@ -26,5 +26,16 @@ namespace AgroByte_Desktop
         {
             Application.Exit();
         }
+
+       
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void principal1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
