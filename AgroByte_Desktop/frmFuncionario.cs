@@ -59,6 +59,8 @@ namespace AgroByte_Desktop
             txtLoginFunc.Clear();
             txtSenhaFunc.Clear();
             txtNomeFunc.Focus();
+            txtPesquisaFunc.Clear();
+            dataGridFunc.DataSource = null;
 
 
         }
@@ -77,6 +79,7 @@ namespace AgroByte_Desktop
             buttonNovoFunc.Enabled = false;
             txtNomeFunc.Enabled = true;
             txtLoginFunc.Enabled = true;
+            txtSenhaFunc.Enabled = true;
         }
 
 
@@ -146,6 +149,7 @@ namespace AgroByte_Desktop
 
                     cn.Open();
                     cm.ExecuteNonQuery();
+                    cm.Parameters.Clear();
 
                     MessageBox.Show("Dados salvos com sucesso!!!!.","Inserção de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNomeFunc.Focus();
@@ -173,10 +177,12 @@ namespace AgroByte_Desktop
                 try
                 {
                     cn.Open(); // abre a conexão com o banco de dados
-                               //cm.CommandText = " select * from senhas where Usuario like ('" + txtPesquisaFunc.Text + "%')";
-                    cm.CommandText = " select SenhaId, Login, Usuario  from senhas where Usuario like ('" + txtPesquisaFunc.Text + "%')";
+                               cm.CommandText = " select * from senhas where Usuario like ('" + txtPesquisaFunc.Text + "%')";
+                    
 
                     cm.Connection = cn;
+                    
+
 
                     SqlDataAdapter da = new SqlDataAdapter(); // recebe os dados de uma tabela após a execução de um select
 
@@ -208,8 +214,9 @@ namespace AgroByte_Desktop
         private void carregaFuncionario()
         {
             lblCoc.Text = dataGridFunc.SelectedRows[0].Cells[0].Value.ToString();
-            txtLoginFunc.Text = dataGridFunc.SelectedRows[0].Cells[1].Value.ToString();
-            txtNomeFunc.Text = dataGridFunc.SelectedRows[0].Cells[2].Value.ToString();
+            txtLoginFunc.Text = dataGridFunc.SelectedRows[0].Cells[2].Value.ToString();
+            txtNomeFunc.Text = dataGridFunc.SelectedRows[0].Cells[3].Value.ToString();
+            txtSenhaFunc.Text = dataGridFunc.SelectedRows[0].Cells[1].Value.ToString();
             manipularDados();
 
         }
@@ -253,9 +260,10 @@ namespace AgroByte_Desktop
                     string nome = txtNomeFunc.Text;
                     string login = txtLoginFunc.Text;
                     string senha = txtSenhaFunc.Text;
+                    int cd = Convert.ToInt32(lblCoc.Text);
 
 
-                    string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario";
+                    string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario where SenhaID=@cd ";
 
                     cm.CommandText = strSql;
                     cm.Connection = cn;
@@ -265,11 +273,14 @@ namespace AgroByte_Desktop
                     cm.Parameters.Add("@login", SqlDbType.VarChar).Value = login;
                     cm.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
                     cm.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = nome;
+                    cm.Parameters.Add("@cd", SqlDbType.Int).Value = cd;
 
                     cn.Open();
                     cm.ExecuteNonQuery();
 
-                    MessageBox.Show("Dados salvos com sucesso!!!!.", "Inserção de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cm.Parameters.Clear();
+
+                    MessageBox.Show("Dados alterados com sucesso!!!!.", "Alteração de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNomeFunc.Focus();
                     limparCampos();
                 }

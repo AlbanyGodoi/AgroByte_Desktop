@@ -46,6 +46,9 @@
             this.buttonNovoFunc = new System.Windows.Forms.Button();
             this.lblCodigoFunc = new System.Windows.Forms.Label();
             this.lblCoc = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radStAtivo = new System.Windows.Forms.RadioButton();
+            this.radStInativo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).BeginInit();
             this.groupBoxPesquisaFunc.SuspendLayout();
             this.SuspendLayout();
@@ -55,8 +58,8 @@
             this.lblfunc.AutoSize = true;
             this.lblfunc.Font = new System.Drawing.Font("Arial", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfunc.ForeColor = System.Drawing.Color.Green;
-            this.lblfunc.Location = new System.Drawing.Point(326, 32);
-            this.lblfunc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfunc.Location = new System.Drawing.Point(456, 37);
+            this.lblfunc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblfunc.Name = "lblfunc";
             this.lblfunc.Size = new System.Drawing.Size(267, 51);
             this.lblfunc.TabIndex = 0;
@@ -66,8 +69,8 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(17, 104);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(24, 121);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(99, 27);
             this.lblCodigo.TabIndex = 1;
@@ -78,8 +81,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 209);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(29, 229);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 27);
             this.label2.TabIndex = 2;
@@ -88,19 +91,19 @@
             // txtLoginFunc
             // 
             this.txtLoginFunc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginFunc.Location = new System.Drawing.Point(107, 210);
-            this.txtLoginFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginFunc.Location = new System.Drawing.Point(150, 226);
+            this.txtLoginFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtLoginFunc.MaxLength = 19;
             this.txtLoginFunc.Name = "txtLoginFunc";
-            this.txtLoginFunc.Size = new System.Drawing.Size(336, 34);
+            this.txtLoginFunc.Size = new System.Drawing.Size(469, 34);
             this.txtLoginFunc.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 170);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(24, 180);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 27);
             this.label3.TabIndex = 4;
@@ -109,11 +112,11 @@
             // txtPesquisaFunc
             // 
             this.txtPesquisaFunc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisaFunc.Location = new System.Drawing.Point(45, 47);
-            this.txtPesquisaFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPesquisaFunc.Location = new System.Drawing.Point(63, 55);
+            this.txtPesquisaFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtPesquisaFunc.MaxLength = 60;
             this.txtPesquisaFunc.Name = "txtPesquisaFunc";
-            this.txtPesquisaFunc.Size = new System.Drawing.Size(466, 34);
+            this.txtPesquisaFunc.Size = new System.Drawing.Size(651, 34);
             this.txtPesquisaFunc.TabIndex = 5;
             this.txtPesquisaFunc.TextChanged += new System.EventHandler(this.txtPesquisaFunc_TextChanged);
             // 
@@ -121,8 +124,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 248);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(29, 278);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 27);
             this.label4.TabIndex = 6;
@@ -131,25 +134,25 @@
             // txtSenhaFunc
             // 
             this.txtSenhaFunc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaFunc.Location = new System.Drawing.Point(107, 252);
-            this.txtSenhaFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSenhaFunc.Location = new System.Drawing.Point(150, 275);
+            this.txtSenhaFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtSenhaFunc.MaxLength = 10;
             this.txtSenhaFunc.Name = "txtSenhaFunc";
-            this.txtSenhaFunc.Size = new System.Drawing.Size(336, 34);
+            this.txtSenhaFunc.Size = new System.Drawing.Size(469, 34);
             this.txtSenhaFunc.TabIndex = 7;
             this.txtSenhaFunc.UseSystemPasswordChar = true;
             // 
             // dataGridFunc
             // 
             this.dataGridFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFunc.Location = new System.Drawing.Point(22, 455);
-            this.dataGridFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridFunc.Location = new System.Drawing.Point(31, 531);
+            this.dataGridFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.dataGridFunc.MultiSelect = false;
             this.dataGridFunc.Name = "dataGridFunc";
             this.dataGridFunc.RowHeadersWidth = 51;
             this.dataGridFunc.RowTemplate.Height = 24;
             this.dataGridFunc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridFunc.Size = new System.Drawing.Size(580, 82);
+            this.dataGridFunc.Size = new System.Drawing.Size(812, 96);
             this.dataGridFunc.TabIndex = 8;
             this.dataGridFunc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridFunc_CellContentClick);
             this.dataGridFunc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridFunc_MouseDoubleClick);
@@ -158,11 +161,11 @@
             // 
             this.groupBoxPesquisaFunc.Controls.Add(this.txtPesquisaFunc);
             this.groupBoxPesquisaFunc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxPesquisaFunc.Location = new System.Drawing.Point(22, 329);
-            this.groupBoxPesquisaFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxPesquisaFunc.Location = new System.Drawing.Point(31, 384);
+            this.groupBoxPesquisaFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.groupBoxPesquisaFunc.Name = "groupBoxPesquisaFunc";
-            this.groupBoxPesquisaFunc.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxPesquisaFunc.Size = new System.Drawing.Size(580, 118);
+            this.groupBoxPesquisaFunc.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.groupBoxPesquisaFunc.Size = new System.Drawing.Size(812, 138);
             this.groupBoxPesquisaFunc.TabIndex = 9;
             this.groupBoxPesquisaFunc.TabStop = false;
             this.groupBoxPesquisaFunc.Text = "Pesquisa por Funcionário";
@@ -170,11 +173,11 @@
             // txtNomeFunc
             // 
             this.txtNomeFunc.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeFunc.Location = new System.Drawing.Point(107, 168);
-            this.txtNomeFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomeFunc.Location = new System.Drawing.Point(150, 177);
+            this.txtNomeFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtNomeFunc.MaxLength = 19;
             this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.Size = new System.Drawing.Size(486, 34);
+            this.txtNomeFunc.Size = new System.Drawing.Size(679, 34);
             this.txtNomeFunc.TabIndex = 10;
             // 
             // buttonCancelarFunc
@@ -183,10 +186,10 @@
             this.buttonCancelarFunc.BackColor = System.Drawing.SystemColors.Info;
             this.buttonCancelarFunc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelarFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_16;
-            this.buttonCancelarFunc.Location = new System.Drawing.Point(637, 466);
-            this.buttonCancelarFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancelarFunc.Location = new System.Drawing.Point(892, 544);
+            this.buttonCancelarFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonCancelarFunc.Name = "buttonCancelarFunc";
-            this.buttonCancelarFunc.Size = new System.Drawing.Size(162, 62);
+            this.buttonCancelarFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonCancelarFunc.TabIndex = 15;
             this.buttonCancelarFunc.Text = "Cancelar";
             this.buttonCancelarFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -198,10 +201,10 @@
             this.buttonExcluirFunc.BackColor = System.Drawing.Color.Salmon;
             this.buttonExcluirFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExcluirFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_full_trash_28;
-            this.buttonExcluirFunc.Location = new System.Drawing.Point(637, 376);
-            this.buttonExcluirFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExcluirFunc.Location = new System.Drawing.Point(892, 439);
+            this.buttonExcluirFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonExcluirFunc.Name = "buttonExcluirFunc";
-            this.buttonExcluirFunc.Size = new System.Drawing.Size(162, 62);
+            this.buttonExcluirFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonExcluirFunc.TabIndex = 14;
             this.buttonExcluirFunc.Text = "Excluir";
             this.buttonExcluirFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,10 +215,10 @@
             this.buttonEditarFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEditarFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_edit_28;
-            this.buttonEditarFunc.Location = new System.Drawing.Point(637, 298);
-            this.buttonEditarFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEditarFunc.Location = new System.Drawing.Point(892, 348);
+            this.buttonEditarFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonEditarFunc.Name = "buttonEditarFunc";
-            this.buttonEditarFunc.Size = new System.Drawing.Size(162, 62);
+            this.buttonEditarFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonEditarFunc.TabIndex = 13;
             this.buttonEditarFunc.Text = "Editar";
             this.buttonEditarFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,10 +230,10 @@
             this.buttonSalvarFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonSalvarFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalvarFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_salvar;
-            this.buttonSalvarFunc.Location = new System.Drawing.Point(637, 228);
-            this.buttonSalvarFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSalvarFunc.Location = new System.Drawing.Point(892, 266);
+            this.buttonSalvarFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonSalvarFunc.Name = "buttonSalvarFunc";
-            this.buttonSalvarFunc.Size = new System.Drawing.Size(162, 62);
+            this.buttonSalvarFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonSalvarFunc.TabIndex = 12;
             this.buttonSalvarFunc.Text = "Salvar";
             this.buttonSalvarFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -242,10 +245,10 @@
             this.buttonNovoFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonNovoFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNovoFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo;
-            this.buttonNovoFunc.Location = new System.Drawing.Point(637, 154);
-            this.buttonNovoFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNovoFunc.Location = new System.Drawing.Point(892, 180);
+            this.buttonNovoFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonNovoFunc.Name = "buttonNovoFunc";
-            this.buttonNovoFunc.Size = new System.Drawing.Size(162, 62);
+            this.buttonNovoFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonNovoFunc.TabIndex = 11;
             this.buttonNovoFunc.Text = "Novo";
             this.buttonNovoFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -257,8 +260,8 @@
             this.lblCodigoFunc.AutoSize = true;
             this.lblCodigoFunc.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblCodigoFunc.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoFunc.Location = new System.Drawing.Point(163, 144);
-            this.lblCodigoFunc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigoFunc.Location = new System.Drawing.Point(228, 168);
+            this.lblCodigoFunc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCodigoFunc.Name = "lblCodigoFunc";
             this.lblCodigoFunc.Size = new System.Drawing.Size(0, 32);
             this.lblCodigoFunc.TabIndex = 16;
@@ -267,16 +270,54 @@
             // lblCoc
             // 
             this.lblCoc.AutoSize = true;
-            this.lblCoc.Location = new System.Drawing.Point(123, 107);
+            this.lblCoc.Location = new System.Drawing.Point(172, 125);
+            this.lblCoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCoc.Name = "lblCoc";
-            this.lblCoc.Size = new System.Drawing.Size(0, 24);
+            this.lblCoc.Size = new System.Drawing.Size(0, 28);
             this.lblCoc.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 336);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Status:";
+            // 
+            // radStAtivo
+            // 
+            this.radStAtivo.AutoSize = true;
+            this.radStAtivo.Checked = true;
+            this.radStAtivo.Location = new System.Drawing.Point(150, 331);
+            this.radStAtivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radStAtivo.Name = "radStAtivo";
+            this.radStAtivo.Size = new System.Drawing.Size(89, 32);
+            this.radStAtivo.TabIndex = 19;
+            this.radStAtivo.TabStop = true;
+            this.radStAtivo.Text = "Ativo";
+            this.radStAtivo.UseVisualStyleBackColor = true;
+            // 
+            // radStInativo
+            // 
+            this.radStInativo.AutoSize = true;
+            this.radStInativo.Location = new System.Drawing.Point(261, 331);
+            this.radStInativo.Name = "radStInativo";
+            this.radStInativo.Size = new System.Drawing.Size(107, 32);
+            this.radStInativo.TabIndex = 20;
+            this.radStInativo.Text = "Inativo";
+            this.radStInativo.UseVisualStyleBackColor = true;
             // 
             // frmFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.radStInativo);
+            this.Controls.Add(this.radStAtivo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCoc);
             this.Controls.Add(this.lblCodigoFunc);
             this.Controls.Add(this.buttonCancelarFunc);
@@ -294,10 +335,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblfunc);
-            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmFuncionario";
-            this.Size = new System.Drawing.Size(1131, 781);
+            this.Size = new System.Drawing.Size(1583, 911);
             this.Load += new System.EventHandler(this.frmFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).EndInit();
             this.groupBoxPesquisaFunc.ResumeLayout(false);
@@ -327,5 +368,8 @@
         private System.Windows.Forms.Button buttonCancelarFunc;
         private System.Windows.Forms.Label lblCodigoFunc;
         private System.Windows.Forms.Label lblCoc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radStAtivo;
+        private System.Windows.Forms.RadioButton radStInativo;
     }
 }

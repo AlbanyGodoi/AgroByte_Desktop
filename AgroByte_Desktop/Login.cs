@@ -53,7 +53,7 @@ namespace AgroByte_Desktop
                 try
                 {
                     cn.Open();
-                    cm.CommandText = "select * from senhas where Login = ('" + txtLogin.Text + "') and Senha = ('" + txtSenha.Text + "')";
+                    cm.CommandText = "select * from senhas where Login = ('" + txtLogin.Text + "') and Senha = ('" + txtSenha.Text + "') and status = 1";
                     cm.Connection = cn;
                     dt =cm.ExecuteReader();
 

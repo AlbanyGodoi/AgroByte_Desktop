@@ -194,6 +194,7 @@
             // 
             // frmFuncionario1
             // 
+            this.frmFuncionario1.AutoSize = true;
             this.frmFuncionario1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmFuncionario1.Location = new System.Drawing.Point(223, 0);
             this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(4);
@@ -217,6 +218,7 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
