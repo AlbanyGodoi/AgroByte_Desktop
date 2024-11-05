@@ -209,6 +209,7 @@
             this.buttonExcluirFunc.Text = "Excluir";
             this.buttonExcluirFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcluirFunc.UseVisualStyleBackColor = false;
+            this.buttonExcluirFunc.Click += new System.EventHandler(this.buttonExcluirFunc_Click);
             // 
             // buttonEditarFunc
             // 

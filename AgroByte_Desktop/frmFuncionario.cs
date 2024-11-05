@@ -61,7 +61,7 @@ namespace AgroByte_Desktop
             txtNomeFunc.Focus();
             txtPesquisaFunc.Clear();
             dataGridFunc.DataSource = null;
-
+            lblCoc.Visible = false;
 
         }
 
@@ -217,6 +217,16 @@ namespace AgroByte_Desktop
             txtLoginFunc.Text = dataGridFunc.SelectedRows[0].Cells[2].Value.ToString();
             txtNomeFunc.Text = dataGridFunc.SelectedRows[0].Cells[3].Value.ToString();
             txtSenhaFunc.Text = dataGridFunc.SelectedRows[0].Cells[1].Value.ToString();
+            string valor = dataGridFunc.SelectedRows[0].Cells[4].Value.ToString();
+
+            if (valor == "True")
+            { 
+                radStAtivo.Checked = true;
+            }
+            else
+            {
+                radStInativo.Checked = false;
+            }
             manipularDados();
 
         }
@@ -225,6 +235,13 @@ namespace AgroByte_Desktop
         private void dataGridFunc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             carregaFuncionario();
+
+            if(radStAtivo.Checked)
+            {
+                buttonExcluirFunc.Enabled = true;
+            }
+            else
+                buttonExcluirFunc.Enabled=false;
         }
 
         private void buttonEditarFunc_Click(object sender, EventArgs e)
@@ -292,6 +309,75 @@ namespace AgroByte_Desktop
                 finally
                 {
                     cn.Close();
+                }
+            }
+        }
+
+        private void buttonExcluirFunc_Click(object sender, EventArgs e)
+        {
+            if (txtNomeFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo nome.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNomeFunc.Focus();
+            }
+            else if (txtLoginFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo login.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLoginFunc.Focus();
+
+            }
+            else if (txtSenhaFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenhaFunc.Focus();
+
+            }
+            else if (txtSenhaFunc.Text.Length < 8)
+            {
+                MessageBox.Show("O campo senha deve conter no minimo 8 digitos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenhaFunc.Focus();
+
+            }
+            else if (radStAtivo.Checked)
+            {
+                MessageBox.Show("Para bloquear o acesso ao sistema o status deve ser alterado para INATIVO.", "Erro ao tentar alterar o status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+            else
+            {
+                DialogResult exclusao = MessageBox.Show("Confirmar alteração", "alteração de registro",MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (exclusao == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        int cd = Convert.ToInt32(lblCoc.Text);
+                        cn.Open();
+                        string strSql = "update senhas set status = 0 where SenhaId = @cd";
+                        cm.CommandText = strSql;
+                        cm.Connection = cn;
+                        cm.Parameters.Add("@cd", SqlDbType.Int).Value = cd;
+
+                        cm.ExecuteNonQuery();
+
+                        cm.Parameters.Clear();
+
+                        MessageBox.Show("Dados alterados com sucesso!!!!.", "Alteração de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtNomeFunc.Focus();
+                        limparCampos();
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message);
+                        cn.Close();
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
                 }
             }
         }
