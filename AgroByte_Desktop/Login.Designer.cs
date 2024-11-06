@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.telaLogin = new System.Windows.Forms.Panel();
             this.buttonSairAplic = new System.Windows.Forms.Button();
             this.buttonAcessar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -46,7 +46,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.telaLogin.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSenha)).BeginInit();
             this.panel3.SuspendLayout();
@@ -96,23 +96,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // telaLogin
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel2.Controls.Add(this.buttonSairAplic);
-            this.panel2.Controls.Add(this.buttonAcessar);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.buttonFecharLogin);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 530);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.telaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.telaLogin.Controls.Add(this.buttonSairAplic);
+            this.telaLogin.Controls.Add(this.buttonAcessar);
+            this.telaLogin.Controls.Add(this.panel4);
+            this.telaLogin.Controls.Add(this.panel3);
+            this.telaLogin.Controls.Add(this.label2);
+            this.telaLogin.Controls.Add(this.buttonFecharLogin);
+            this.telaLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.telaLogin.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telaLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.telaLogin.Location = new System.Drawing.Point(300, 0);
+            this.telaLogin.Name = "telaLogin";
+            this.telaLogin.Size = new System.Drawing.Size(450, 530);
+            this.telaLogin.TabIndex = 1;
+            this.telaLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // buttonSairAplic
             // 
@@ -222,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 530);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.telaLogin);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -232,8 +232,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.telaLogin.ResumeLayout(false);
+            this.telaLogin.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSenha)).EndInit();
@@ -250,7 +250,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel telaLogin;
         private System.Windows.Forms.Button buttonFecharLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;

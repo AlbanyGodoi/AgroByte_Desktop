@@ -49,8 +49,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radStAtivo = new System.Windows.Forms.RadioButton();
             this.radStInativo = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblUsuariologado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).BeginInit();
             this.groupBoxPesquisaFunc.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblfunc
@@ -293,13 +297,14 @@
             this.radStAtivo.AutoSize = true;
             this.radStAtivo.Checked = true;
             this.radStAtivo.Location = new System.Drawing.Point(150, 331);
-            this.radStAtivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radStAtivo.Margin = new System.Windows.Forms.Padding(4);
             this.radStAtivo.Name = "radStAtivo";
             this.radStAtivo.Size = new System.Drawing.Size(89, 32);
             this.radStAtivo.TabIndex = 19;
             this.radStAtivo.TabStop = true;
             this.radStAtivo.Text = "Ativo";
             this.radStAtivo.UseVisualStyleBackColor = true;
+            this.radStAtivo.CheckedChanged += new System.EventHandler(this.radStAtivo_CheckedChanged);
             // 
             // radStInativo
             // 
@@ -311,11 +316,40 @@
             this.radStInativo.Text = "Inativo";
             this.radStInativo.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblUsuariologado);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(31, 527);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(322, 229);
+            this.panel1.TabIndex = 21;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 28);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Usuário Logado:";
+            // 
+            // lblUsuariologado
+            // 
+            this.lblUsuariologado.AutoSize = true;
+            this.lblUsuariologado.ForeColor = System.Drawing.Color.Red;
+            this.lblUsuariologado.Location = new System.Drawing.Point(43, 72);
+            this.lblUsuariologado.Name = "lblUsuariologado";
+            this.lblUsuariologado.Size = new System.Drawing.Size(0, 28);
+            this.lblUsuariologado.TabIndex = 1;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.radStInativo);
             this.Controls.Add(this.radStAtivo);
             this.Controls.Add(this.label1);
@@ -344,6 +378,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).EndInit();
             this.groupBoxPesquisaFunc.ResumeLayout(false);
             this.groupBoxPesquisaFunc.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +408,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radStAtivo;
         private System.Windows.Forms.RadioButton radStInativo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblUsuariologado;
+        private System.Windows.Forms.Label label5;
     }
 }

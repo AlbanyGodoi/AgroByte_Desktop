@@ -126,6 +126,15 @@ namespace AgroByte_Desktop
                 txtSenhaFunc.Focus();
 
             }
+
+            else if (radStInativo.Checked)
+            {
+                MessageBox.Show("Inpossivel realizar o cadasdo de funcionário como STATUS INATIVO.", "Erro ao tentar gravar o registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
+
+
+
             else
             {
                 try
@@ -136,7 +145,7 @@ namespace AgroByte_Desktop
                     string senha = txtSenhaFunc.Text;
 
 
-                    string strSql = " insert into senhas (Login,Senha,Usuario) values(@login,@senha,@Usuario)";
+                    string strSql = " insert into senhas (Login,Senha,Usuario,status) values(@login,@senha,@Usuario,1)";
 
                     cm.CommandText = strSql;
                     cm.Connection =cn;
@@ -225,7 +234,7 @@ namespace AgroByte_Desktop
             }
             else
             {
-                radStInativo.Checked = false;
+                radStInativo.Checked = true;
             }
             manipularDados();
 
@@ -269,6 +278,15 @@ namespace AgroByte_Desktop
                 txtSenhaFunc.Focus();
 
             }
+
+            else if(radStAtivo.Checked)
+            {
+                MessageBox.Show("Para colocar o funcionario como Inativo clicar no botão excluir ", "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
             else
             {
                 try
@@ -280,7 +298,7 @@ namespace AgroByte_Desktop
                     int cd = Convert.ToInt32(lblCoc.Text);
 
 
-                    string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario where SenhaID=@cd ";
+                    string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario, status = 1  where SenhaID=@cd ";
 
                     cm.CommandText = strSql;
                     cm.Connection = cn;
@@ -338,7 +356,7 @@ namespace AgroByte_Desktop
                 txtSenhaFunc.Focus();
 
             }
-            else if (radStAtivo.Checked)
+            else if (radStInativo.Checked)
             {
                 MessageBox.Show("Para bloquear o acesso ao sistema o status deve ser alterado para INATIVO.", "Erro ao tentar alterar o status", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
@@ -380,6 +398,16 @@ namespace AgroByte_Desktop
                     }
                 }
             }
+        }
+
+        private void radStAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            lblUsuariologado.Text = Login.usuario;
         }
     } 
 }

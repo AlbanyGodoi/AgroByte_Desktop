@@ -17,12 +17,13 @@ namespace AgroByte_Desktop
         {
             InitializeComponent();
         }
-
+        public static string usuario;
+        public static string codUsuario;
         //Conexao com banco de dados
 
         SqlConnection cn = new SqlConnection(@"Data Source=ALBANY;Initial Catalog=Agrobyte;Integrated Security=SSPI");
         SqlCommand cm = new SqlCommand();
-        SqlDataReader dt;
+        //SqlDataReader dt;
 
 
         private void buttonFecharLogin_Click(object sender, EventArgs e)
@@ -55,10 +56,15 @@ namespace AgroByte_Desktop
                     cn.Open();
                     cm.CommandText = "select * from senhas where Login = ('" + txtLogin.Text + "') and Senha = ('" + txtSenha.Text + "') and status = 1";
                     cm.Connection = cn;
-                    dt =cm.ExecuteReader();
+                    //dt =cm.ExecuteReader();
+                    SqlDataAdapter da = new SqlDataAdapter(cm);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                    if (dt.HasRows)
+                    if (dt.Rows.Count > 0) // contagem de linha no datatable
                     {
+                        usuario = dt.Rows[0]["login"].ToString();
+                        codUsuario = dt.Rows[0]["SenhaId"].ToString();
                         frmMenu menu = new frmMenu();
                         menu.Show();
                         this.Hide();

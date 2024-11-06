@@ -24,7 +24,9 @@ namespace AgroByte_Desktop
 
         private void buttonSairAplic1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login telaLogin = new Login();
+            telaLogin.Show();
+            this.Hide();
         }
 
        
