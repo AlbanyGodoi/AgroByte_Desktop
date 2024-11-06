@@ -209,11 +209,12 @@
             // 
             // fmlCadastro1
             // 
+            this.fmlCadastro1.AutoSize = true;
             this.fmlCadastro1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmlCadastro1.Location = new System.Drawing.Point(213, 0);
+            this.fmlCadastro1.Location = new System.Drawing.Point(223, 0);
             this.fmlCadastro1.Margin = new System.Windows.Forms.Padding(4);
             this.fmlCadastro1.Name = "fmlCadastro1";
-            this.fmlCadastro1.Size = new System.Drawing.Size(1100, 751);
+            this.fmlCadastro1.Size = new System.Drawing.Size(1057, 721);
             this.fmlCadastro1.TabIndex = 3;
             // 
             // frmMenu
