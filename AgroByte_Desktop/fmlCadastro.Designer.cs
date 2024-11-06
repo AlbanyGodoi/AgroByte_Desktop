@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblCadastro = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblCod = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNomeCad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,7 +73,11 @@
             this.CbTipoCad = new System.Windows.Forms.ComboBox();
             this.CbEstadoCad = new System.Windows.Forms.ComboBox();
             this.buttonExcluirCad = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtPesquisacad = new System.Windows.Forms.TextBox();
+            this.dataGridViewCad = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadastro
@@ -89,26 +93,26 @@
             this.lblCadastro.Text = "Cadastro";
             this.lblCadastro.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label1
+            // lblCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 178);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 27);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Código:";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(44, 178);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(85, 27);
+            this.lblCodigo.TabIndex = 7;
+            this.lblCodigo.Text = "Código:";
             // 
-            // label2
+            // lblCod
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 27);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "1";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCod.Location = new System.Drawing.Point(136, 177);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(25, 27);
+            this.lblCod.TabIndex = 8;
+            this.lblCod.Text = "1";
             // 
             // label3
             // 
@@ -178,7 +182,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 296);
+            this.label8.Location = new System.Drawing.Point(45, 281);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 21);
             this.label8.TabIndex = 13;
@@ -198,7 +202,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(484, 296);
+            this.label10.Location = new System.Drawing.Point(484, 281);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 21);
             this.label10.TabIndex = 15;
@@ -208,7 +212,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(613, 296);
+            this.label11.Location = new System.Drawing.Point(613, 281);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 21);
             this.label11.TabIndex = 17;
@@ -218,7 +222,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(44, 371);
+            this.label12.Location = new System.Drawing.Point(51, 338);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 21);
             this.label12.TabIndex = 19;
@@ -228,7 +232,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(484, 371);
+            this.label13.Location = new System.Drawing.Point(484, 338);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 21);
             this.label13.TabIndex = 21;
@@ -238,7 +242,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(613, 371);
+            this.label14.Location = new System.Drawing.Point(613, 338);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 21);
             this.label14.TabIndex = 23;
@@ -248,7 +252,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(44, 445);
+            this.label15.Location = new System.Drawing.Point(45, 402);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(72, 21);
             this.label15.TabIndex = 25;
@@ -258,7 +262,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(484, 445);
+            this.label16.Location = new System.Drawing.Point(484, 402);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 21);
             this.label16.TabIndex = 27;
@@ -268,7 +272,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(683, 445);
+            this.label17.Location = new System.Drawing.Point(683, 402);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(61, 21);
             this.label17.TabIndex = 29;
@@ -276,51 +280,52 @@
             // 
             // txtEndCad
             // 
-            this.txtEndCad.Location = new System.Drawing.Point(49, 326);
+            this.txtEndCad.Location = new System.Drawing.Point(48, 305);
             this.txtEndCad.Name = "txtEndCad";
             this.txtEndCad.Size = new System.Drawing.Size(419, 30);
             this.txtEndCad.TabIndex = 14;
             // 
             // txtNumCad
             // 
-            this.txtNumCad.Location = new System.Drawing.Point(488, 326);
+            this.txtNumCad.Location = new System.Drawing.Point(482, 305);
             this.txtNumCad.Name = "txtNumCad";
             this.txtNumCad.Size = new System.Drawing.Size(100, 30);
             this.txtNumCad.TabIndex = 16;
             // 
             // txtBairroCad
             // 
-            this.txtBairroCad.Location = new System.Drawing.Point(617, 326);
+            this.txtBairroCad.Location = new System.Drawing.Point(617, 305);
             this.txtBairroCad.Name = "txtBairroCad";
             this.txtBairroCad.Size = new System.Drawing.Size(235, 30);
             this.txtBairroCad.TabIndex = 18;
             // 
             // txtCidadeCad
             // 
-            this.txtCidadeCad.Location = new System.Drawing.Point(49, 402);
+            this.txtCidadeCad.Location = new System.Drawing.Point(49, 366);
             this.txtCidadeCad.Name = "txtCidadeCad";
             this.txtCidadeCad.Size = new System.Drawing.Size(419, 30);
             this.txtCidadeCad.TabIndex = 20;
             // 
             // txtEmailCad
             // 
-            this.txtEmailCad.Location = new System.Drawing.Point(49, 478);
+            this.txtEmailCad.Location = new System.Drawing.Point(48, 426);
             this.txtEmailCad.Name = "txtEmailCad";
             this.txtEmailCad.Size = new System.Drawing.Size(419, 30);
             this.txtEmailCad.TabIndex = 26;
             // 
             // buttonNovoCad
             // 
-            this.buttonNovoCad.Location = new System.Drawing.Point(49, 553);
+            this.buttonNovoCad.Location = new System.Drawing.Point(876, 164);
             this.buttonNovoCad.Name = "buttonNovoCad";
             this.buttonNovoCad.Size = new System.Drawing.Size(123, 48);
             this.buttonNovoCad.TabIndex = 31;
             this.buttonNovoCad.Text = "Novo";
             this.buttonNovoCad.UseVisualStyleBackColor = true;
+            this.buttonNovoCad.Click += new System.EventHandler(this.buttonNovoCad_Click);
             // 
             // buttonSalvarCad
             // 
-            this.buttonSalvarCad.Location = new System.Drawing.Point(179, 553);
+            this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
             this.buttonSalvarCad.Name = "buttonSalvarCad";
             this.buttonSalvarCad.Size = new System.Drawing.Size(123, 48);
             this.buttonSalvarCad.TabIndex = 32;
@@ -329,7 +334,7 @@
             // 
             // buttonEditarCad
             // 
-            this.buttonEditarCad.Location = new System.Drawing.Point(308, 554);
+            this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
             this.buttonEditarCad.Name = "buttonEditarCad";
             this.buttonEditarCad.Size = new System.Drawing.Size(128, 51);
             this.buttonEditarCad.TabIndex = 33;
@@ -338,7 +343,7 @@
             // 
             // buttonInativoCad
             // 
-            this.buttonInativoCad.Location = new System.Drawing.Point(443, 555);
+            this.buttonInativoCad.Location = new System.Drawing.Point(877, 338);
             this.buttonInativoCad.Name = "buttonInativoCad";
             this.buttonInativoCad.Size = new System.Drawing.Size(128, 50);
             this.buttonInativoCad.TabIndex = 34;
@@ -347,12 +352,13 @@
             // 
             // buttonCancelarCad
             // 
-            this.buttonCancelarCad.Location = new System.Drawing.Point(586, 555);
+            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 402);
             this.buttonCancelarCad.Name = "buttonCancelarCad";
             this.buttonCancelarCad.Size = new System.Drawing.Size(129, 50);
             this.buttonCancelarCad.TabIndex = 35;
             this.buttonCancelarCad.Text = "Cancelar";
             this.buttonCancelarCad.UseVisualStyleBackColor = true;
+            this.buttonCancelarCad.Click += new System.EventHandler(this.buttonCancelarCad_Click);
             // 
             // label18
             // 
@@ -417,7 +423,7 @@
             // txtCelularCad
             // 
             this.txtCelularCad.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtCelularCad.Location = new System.Drawing.Point(488, 478);
+            this.txtCelularCad.Location = new System.Drawing.Point(482, 426);
             this.txtCelularCad.Mask = "(00)00000-0000";
             this.txtCelularCad.Name = "txtCelularCad";
             this.txtCelularCad.Size = new System.Drawing.Size(179, 30);
@@ -426,7 +432,7 @@
             // txtFoneCad
             // 
             this.txtFoneCad.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtFoneCad.Location = new System.Drawing.Point(687, 478);
+            this.txtFoneCad.Location = new System.Drawing.Point(687, 426);
             this.txtFoneCad.Mask = "(00)0000-0000";
             this.txtFoneCad.Name = "txtFoneCad";
             this.txtFoneCad.Size = new System.Drawing.Size(165, 30);
@@ -435,7 +441,7 @@
             // txtCepCad
             // 
             this.txtCepCad.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtCepCad.Location = new System.Drawing.Point(617, 402);
+            this.txtCepCad.Location = new System.Drawing.Point(617, 368);
             this.txtCepCad.Mask = "00000-000";
             this.txtCepCad.Name = "txtCepCad";
             this.txtCepCad.Size = new System.Drawing.Size(235, 30);
@@ -539,24 +545,53 @@
             "SE",
             "",
             "TO"});
-            this.CbEstadoCad.Location = new System.Drawing.Point(482, 402);
+            this.CbEstadoCad.Location = new System.Drawing.Point(482, 366);
             this.CbEstadoCad.Name = "CbEstadoCad";
             this.CbEstadoCad.Size = new System.Drawing.Size(121, 32);
             this.CbEstadoCad.TabIndex = 49;
             // 
             // buttonExcluirCad
             // 
-            this.buttonExcluirCad.Location = new System.Drawing.Point(721, 555);
+            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 458);
             this.buttonExcluirCad.Name = "buttonExcluirCad";
             this.buttonExcluirCad.Size = new System.Drawing.Size(131, 50);
             this.buttonExcluirCad.TabIndex = 50;
             this.buttonExcluirCad.Text = "Excluir";
             this.buttonExcluirCad.UseVisualStyleBackColor = true;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(50, 475);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(86, 24);
+            this.label21.TabIndex = 51;
+            this.label21.Text = "Pesquisa:";
+            // 
+            // txtPesquisacad
+            // 
+            this.txtPesquisacad.Location = new System.Drawing.Point(141, 476);
+            this.txtPesquisacad.Name = "txtPesquisacad";
+            this.txtPesquisacad.Size = new System.Drawing.Size(711, 30);
+            this.txtPesquisacad.TabIndex = 52;
+            // 
+            // dataGridViewCad
+            // 
+            this.dataGridViewCad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCad.Location = new System.Drawing.Point(141, 507);
+            this.dataGridViewCad.Name = "dataGridViewCad";
+            this.dataGridViewCad.RowHeadersWidth = 51;
+            this.dataGridViewCad.RowTemplate.Height = 24;
+            this.dataGridViewCad.Size = new System.Drawing.Size(711, 150);
+            this.dataGridViewCad.TabIndex = 53;
+            // 
             // fmlCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridViewCad);
+            this.Controls.Add(this.txtPesquisacad);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.buttonExcluirCad);
             this.Controls.Add(this.CbEstadoCad);
             this.Controls.Add(this.CbTipoCad);
@@ -599,15 +634,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNomeCad);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCod);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblCadastro);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmlCadastro";
-            this.Size = new System.Drawing.Size(900, 660);
+            this.Size = new System.Drawing.Size(1057, 660);
             this.Load += new System.EventHandler(this.fmlCadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,8 +652,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblCadastro;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNomeCad;
         private System.Windows.Forms.Label label4;
@@ -660,5 +696,8 @@
         private System.Windows.Forms.ComboBox CbTipoCad;
         private System.Windows.Forms.ComboBox CbEstadoCad;
         private System.Windows.Forms.Button buttonExcluirCad;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtPesquisacad;
+        private System.Windows.Forms.DataGridView dataGridViewCad;
     }
 }

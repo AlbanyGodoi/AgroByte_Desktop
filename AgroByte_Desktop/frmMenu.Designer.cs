@@ -38,8 +38,8 @@
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.buttonFuncionario = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
             this.principal = new AgroByte_Desktop.principal1();
+            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
             this.fmlCadastro1 = new AgroByte_Desktop.fmlCadastro();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 644);
+            this.panelMenu.Size = new System.Drawing.Size(220, 669);
             this.panelMenu.TabIndex = 0;
             // 
             // buttonSairAplic1
@@ -189,29 +189,28 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
-            // frmFuncionario1
-            // 
-            this.frmFuncionario1.AutoSize = true;
-            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frmFuncionario1.Location = new System.Drawing.Point(223, 0);
-            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.frmFuncionario1.Name = "frmFuncionario1";
-            this.frmFuncionario1.Size = new System.Drawing.Size(926, 651);
-            this.frmFuncionario1.TabIndex = 2;
-            this.frmFuncionario1.Load += new System.EventHandler(this.frmFuncionario1_Load);
-            // 
             // principal
             // 
             this.principal.Location = new System.Drawing.Point(223, 0);
             this.principal.Name = "principal";
-            this.principal.Size = new System.Drawing.Size(857, 545);
+            this.principal.Size = new System.Drawing.Size(1057, 660);
             this.principal.TabIndex = 1;
+            // 
+            // frmFuncionario1
+            // 
+            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frmFuncionario1.Location = new System.Drawing.Point(223, 0);
+            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.frmFuncionario1.Name = "frmFuncionario1";
+            this.frmFuncionario1.Size = new System.Drawing.Size(1100, 660);
+            this.frmFuncionario1.TabIndex = 2;
             // 
             // fmlCadastro1
             // 
             this.fmlCadastro1.AutoSize = true;
+            this.fmlCadastro1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.fmlCadastro1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmlCadastro1.Location = new System.Drawing.Point(223, 0);
+            this.fmlCadastro1.Location = new System.Drawing.Point(214, 0);
             this.fmlCadastro1.Margin = new System.Windows.Forms.Padding(4);
             this.fmlCadastro1.Name = "fmlCadastro1";
             this.fmlCadastro1.Size = new System.Drawing.Size(1057, 721);
@@ -222,7 +221,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1148, 644);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1239, 669);
             this.Controls.Add(this.fmlCadastro1);
             this.Controls.Add(this.frmFuncionario1);
             this.Controls.Add(this.principal);
