@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace AgroByte_Desktop
 {
@@ -22,7 +16,7 @@ namespace AgroByte_Desktop
         SqlConnection cn = new SqlConnection(@"Data Source=ALBANY;Initial Catalog=Agrobyte;Integrated Security=SSPI");
         SqlCommand cm = new SqlCommand();
         SqlDataReader dt;
-        private void desabilitaCampos() 
+        private void desabilitaCampos()
         {
 
             lblCodigo.Visible = false;
@@ -38,7 +32,7 @@ namespace AgroByte_Desktop
             buttonNovoFunc.Enabled = true;
         }
 
-        private void habilitaCampos() 
+        private void habilitaCampos()
         {
             txtNomeFunc.Enabled = true;
             txtLoginFunc.Enabled = true;
@@ -67,15 +61,15 @@ namespace AgroByte_Desktop
 
         private void manipularDados()
         {
-           
+
             lblCodigo.Visible = true;
             lblCoc.Visible = true;
-            
-            
-            buttonEditarFunc.Enabled = true ;
-            buttonCancelarFunc.Enabled = true ;
-            buttonExcluirFunc.Enabled=true ;
-            buttonSalvarFunc.Enabled = false ;
+
+
+            buttonEditarFunc.Enabled = true;
+            buttonCancelarFunc.Enabled = true;
+            buttonExcluirFunc.Enabled = true;
+            buttonSalvarFunc.Enabled = false;
             buttonNovoFunc.Enabled = false;
             txtNomeFunc.Enabled = true;
             txtLoginFunc.Enabled = true;
@@ -103,24 +97,24 @@ namespace AgroByte_Desktop
 
         private void buttonSalvarFunc_Click(object sender, EventArgs e)
         {
-            if(txtNomeFunc.Text == "")
+            if (txtNomeFunc.Text == "")
             {
-                MessageBox.Show("Obrigatório informar o campo nome.","Atenção",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Obrigatório informar o campo nome.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNomeFunc.Focus();
             }
-            else if(txtLoginFunc.Text == "")
+            else if (txtLoginFunc.Text == "")
             {
                 MessageBox.Show("Obrigatório informar o campo login.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLoginFunc.Focus();
 
             }
-            else if(txtSenhaFunc.Text == "")
+            else if (txtSenhaFunc.Text == "")
             {
                 MessageBox.Show("Obrigatório informar o campo senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSenhaFunc.Focus();
 
             }
-            else if (txtSenhaFunc.Text.Length < 8 )
+            else if (txtSenhaFunc.Text.Length < 8)
             {
                 MessageBox.Show("O campo senha deve conter no minimo 8 digitos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSenhaFunc.Focus();
@@ -130,7 +124,7 @@ namespace AgroByte_Desktop
             else if (radStInativo.Checked)
             {
                 MessageBox.Show("Inpossivel realizar o cadasdo de funcionário como STATUS INATIVO.", "Erro ao tentar gravar o registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
 
 
@@ -148,9 +142,9 @@ namespace AgroByte_Desktop
                     string strSql = " insert into senhas (Login,Senha,Usuario,status) values(@login,@senha,@Usuario,1)";
 
                     cm.CommandText = strSql;
-                    cm.Connection =cn;
+                    cm.Connection = cn;
 
-                   
+
 
                     cm.Parameters.Add("@login", SqlDbType.VarChar).Value = login;
                     cm.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
@@ -160,7 +154,7 @@ namespace AgroByte_Desktop
                     cm.ExecuteNonQuery();
                     cm.Parameters.Clear();
 
-                    MessageBox.Show("Dados salvos com sucesso!!!!.","Inserção de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados salvos com sucesso!!!!.", "Inserção de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNomeFunc.Focus();
                     limparCampos();
                 }
@@ -186,11 +180,11 @@ namespace AgroByte_Desktop
                 try
                 {
                     cn.Open(); // abre a conexão com o banco de dados
-                               cm.CommandText = " select * from senhas where Usuario like ('" + txtPesquisaFunc.Text + "%')";
-                    
+                    cm.CommandText = " select * from senhas where Usuario like ('" + txtPesquisaFunc.Text + "%')";
+
 
                     cm.Connection = cn;
-                    
+
 
 
                     SqlDataAdapter da = new SqlDataAdapter(); // recebe os dados de uma tabela após a execução de um select
@@ -229,7 +223,7 @@ namespace AgroByte_Desktop
             string valor = dataGridFunc.SelectedRows[0].Cells[4].Value.ToString();
 
             if (valor == "True")
-            { 
+            {
                 radStAtivo.Checked = true;
             }
             else
@@ -245,12 +239,12 @@ namespace AgroByte_Desktop
         {
             carregaFuncionario();
 
-            if(radStAtivo.Checked)
+            if (radStAtivo.Checked)
             {
                 buttonExcluirFunc.Enabled = true;
             }
             else
-                buttonExcluirFunc.Enabled=false;
+                buttonExcluirFunc.Enabled = false;
         }
 
         private void buttonEditarFunc_Click(object sender, EventArgs e)
@@ -279,7 +273,7 @@ namespace AgroByte_Desktop
 
             }
 
-            else if(radStAtivo.Checked)
+            else if (radStAtivo.Checked)
             {
                 MessageBox.Show("Para colocar o funcionario como Inativo clicar no botão excluir ", "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -359,11 +353,11 @@ namespace AgroByte_Desktop
             else if (radStInativo.Checked)
             {
                 MessageBox.Show("Para bloquear o acesso ao sistema o status deve ser alterado para INATIVO.", "Erro ao tentar alterar o status", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
             else
             {
-                DialogResult exclusao = MessageBox.Show("Confirmar alteração", "alteração de registro",MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult exclusao = MessageBox.Show("Confirmar alteração", "alteração de registro", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (exclusao == DialogResult.No)
                 {
                     return;
@@ -409,5 +403,5 @@ namespace AgroByte_Desktop
         {
             lblUsuariologado.Text = Login.usuario;
         }
-    } 
+    }
 }

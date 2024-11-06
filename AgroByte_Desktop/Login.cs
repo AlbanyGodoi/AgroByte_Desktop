@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace AgroByte_Desktop
 {
@@ -69,9 +63,9 @@ namespace AgroByte_Desktop
                         menu.Show();
                         this.Hide();
                     }
-                    else 
+                    else
                     {
-                        MessageBox.Show("Usuário ou senha inválidos", "Ocorreu um erro !!!", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Usuário ou senha inválidos", "Ocorreu um erro !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtLogin.Clear();
                         txtSenha.Clear();
                         txtLogin.Focus();
@@ -86,9 +80,9 @@ namespace AgroByte_Desktop
                 {
                     cn.Close();
                 }
-            
-            
-            
+
+
+
             }
 
         }

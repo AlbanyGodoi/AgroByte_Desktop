@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgroByte_Desktop
@@ -29,7 +22,7 @@ namespace AgroByte_Desktop
             this.Hide();
         }
 
-       
+
         private void frmMenu_Load(object sender, EventArgs e)
         {
 
@@ -42,6 +35,18 @@ namespace AgroByte_Desktop
 
         private void frmFuncionario1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonCadastro_Click(object sender, EventArgs e)
+        {
+            fmlCadastro1.BringToFront();
+
+        }
+
+        private void buttonFuncionario_Click(object sender, EventArgs e)
+        {
+            frmFuncionario1.BringToFront();
 
         }
     }
