@@ -14,5 +14,10 @@ namespace AgroByte_Desktop
         {
 
         }
+
+        private void principal1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

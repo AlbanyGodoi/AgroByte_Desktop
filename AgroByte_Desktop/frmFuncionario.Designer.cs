@@ -45,8 +45,8 @@
             this.radStAtivo = new System.Windows.Forms.RadioButton();
             this.radStInativo = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblUsuariologado = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonCancelarFunc = new System.Windows.Forms.Button();
             this.buttonExcluirFunc = new System.Windows.Forms.Button();
             this.buttonEditarFunc = new System.Windows.Forms.Button();
@@ -250,15 +250,6 @@
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 28);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Usuário Logado:";
-            // 
             // lblUsuariologado
             // 
             this.lblUsuariologado.AutoSize = true;
@@ -267,6 +258,15 @@
             this.lblUsuariologado.Name = "lblUsuariologado";
             this.lblUsuariologado.Size = new System.Drawing.Size(0, 28);
             this.lblUsuariologado.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 28);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Usuário Logado:";
             // 
             // buttonCancelarFunc
             // 
@@ -373,7 +373,7 @@
             this.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmFuncionario";
-            this.Size = new System.Drawing.Size(1057, 721);
+            this.Size = new System.Drawing.Size(1088, 1164);
             this.Load += new System.EventHandler(this.frmFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).EndInit();
             this.groupBoxPesquisaFunc.ResumeLayout(false);

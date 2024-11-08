@@ -38,9 +38,9 @@
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.buttonFuncionario = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.principal = new AgroByte_Desktop.principal1();
-            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
             this.fmlCadastro1 = new AgroByte_Desktop.fmlCadastro();
+            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
+            this.principal11 = new AgroByte_Desktop.principal1();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 669);
+            this.panelMenu.Size = new System.Drawing.Size(220, 884);
             this.panelMenu.TabIndex = 0;
             // 
             // buttonSairAplic1
@@ -189,32 +189,32 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
-            // principal
-            // 
-            this.principal.Location = new System.Drawing.Point(223, 0);
-            this.principal.Name = "principal";
-            this.principal.Size = new System.Drawing.Size(1057, 660);
-            this.principal.TabIndex = 1;
-            // 
-            // frmFuncionario1
-            // 
-            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frmFuncionario1.Location = new System.Drawing.Point(223, 0);
-            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.frmFuncionario1.Name = "frmFuncionario1";
-            this.frmFuncionario1.Size = new System.Drawing.Size(1100, 660);
-            this.frmFuncionario1.TabIndex = 2;
-            // 
             // fmlCadastro1
             // 
             this.fmlCadastro1.AutoSize = true;
-            this.fmlCadastro1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.fmlCadastro1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fmlCadastro1.Location = new System.Drawing.Point(214, 0);
             this.fmlCadastro1.Margin = new System.Windows.Forms.Padding(4);
             this.fmlCadastro1.Name = "fmlCadastro1";
-            this.fmlCadastro1.Size = new System.Drawing.Size(1057, 721);
+            this.fmlCadastro1.Size = new System.Drawing.Size(1101, 931);
             this.fmlCadastro1.TabIndex = 3;
+            // 
+            // frmFuncionario1
+            // 
+            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frmFuncionario1.Location = new System.Drawing.Point(214, -9);
+            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.frmFuncionario1.Name = "frmFuncionario1";
+            this.frmFuncionario1.Size = new System.Drawing.Size(1088, 1164);
+            this.frmFuncionario1.TabIndex = 2;
+            // 
+            // principal11
+            // 
+            this.principal11.Location = new System.Drawing.Point(214, 0);
+            this.principal11.Margin = new System.Windows.Forms.Padding(4);
+            this.principal11.Name = "principal11";
+            this.principal11.Size = new System.Drawing.Size(1115, 931);
+            this.principal11.TabIndex = 1;
             // 
             // frmMenu
             // 
@@ -222,10 +222,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1239, 669);
+            this.ClientSize = new System.Drawing.Size(1317, 884);
             this.Controls.Add(this.fmlCadastro1);
             this.Controls.Add(this.frmFuncionario1);
-            this.Controls.Add(this.principal);
+            this.Controls.Add(this.principal11);
             this.Controls.Add(this.panelMenu);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -250,7 +250,7 @@
         private System.Windows.Forms.Button buttonCadCategoria;
         private System.Windows.Forms.Button buttonCaixa;
         private System.Windows.Forms.Button buttonSairAplic1;
-        private principal1 principal;
+        private principal1 principal11;
         private frmFuncionario frmFuncionario1;
         private fmlCadastro fmlCadastro1;
     }

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 
 namespace AgroByte_Desktop
@@ -9,6 +12,14 @@ namespace AgroByte_Desktop
         {
             InitializeComponent();
         }
+
+
+        SqlConnection cn = new SqlConnection(@"Data Source=ALBANY;Initial Catalog=Agrobyte;Integrated Security=SSPI");
+        SqlCommand cm = new SqlCommand();
+        SqlDataReader dt;
+
+
+
         // inicio
 
         private void desabilitaCampos()
@@ -171,6 +182,166 @@ namespace AgroByte_Desktop
         {
             limparCampos();
             desabilitaCampos();
+        }
+
+        private void buttonSalvarCad_Click(object sender, EventArgs e)
+        {
+            if (radioInativo.Checked)
+            {
+                MessageBox.Show("Para inserir um cadastro o status teve estar como ATIVO!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                radioAtivo.Checked = true;
+            }
+
+            else if(txtNomeCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o Campo Nome!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNomeCad.Focus();
+            }
+            else if (txtSobrenomeCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o Campo Sobrenome!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNomeCad.Focus();
+            }
+            else if (txtEmailCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o Campo E-mail!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmailCad.Focus();
+            }
+            else if (txtEndCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o Campo endereço!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEndCad.Focus();
+            }
+            else if (txtNumCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o numero do endereço!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNumCad.Focus();
+            }
+            else if (txtBairroCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o Bairro", "Atenção!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBairroCad.Focus();
+            }
+            else if (txtCidadeCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar a Cidade", "Atenção!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCidadeCad.Focus();
+            }
+            else if (txtCepCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar o CEP da localidade!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCepCad.Focus();
+            }
+            else if (txtCelularCad.Text == "")
+            {
+                MessageBox.Show("Obrigatorio informar um numero de celular!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCelularCad.Focus();
+            }
+            else if (txtCelularCad.Text.Length < 11)
+            {
+                MessageBox.Show("Obrigatorio informar um numero de celular válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCelularCad.Focus();
+            }
+
+            else if(CbTipoCad.SelectedIndex == -1) 
+            {
+                MessageBox.Show("Informar o tipo de cadastro!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+            }
+
+            //else if (CbTipoCad.SelectedIndex == 0 && txtCpfCad.Text.Length < 11)
+            //{
+
+
+            //    MessageBox.Show("Obrigatório informar Cpf válido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    CbTipoCad.Show();
+
+            //}
+
+
+            else if (CbTipoCad.SelectedIndex == 1 && txtCnpjCad.Text.Length < 14)
+            {
+                
+                
+                    MessageBox.Show("Obrigatório informar CNPJ válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCnpjCad.Focus();
+               
+
+            }
+            else if (txtCpfCad.Text.Length < 14)
+            {
+                                       
+                    MessageBox.Show("Obrigatório informar Cpf válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CbTipoCad.Focus();
+                
+                
+            }
+
+            else if( CbEstadoCad.SelectedIndex == -1)
+            {
+                MessageBox.Show("Obrigatório informar um Estado !!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+
+                try
+                {
+
+
+                    string cpf = txtCpfCad.Text;
+                    string cnpj = txtCnpjCad.Text;
+                    string nome = txtNomeCad.Text;
+                    string sobrenome = txtSobrenomeCad.Text;
+                    string endereco = txtEndCad.Text;
+                    string numero = txtNumCad.Text;
+                    string bairro = txtBairroCad.Text;
+                    string cidade = txtCidadeCad.Text;
+                    string cep = txtCepCad.Text;
+                    string estado = CbEstadoCad.SelectedItem.ToString();
+                    string email = txtEmailCad.Text;
+                    string celular = txtCelularCad.Text;
+                    string fone = txtFoneCad.Text;
+                    
+
+                    string strSql = "insert into cadastros(CadastroName,Sobrenome,CPF,CNPJ,CEP,CelularCad,CidadeCad,EmailCad,EnderecoCad1,EstadoCad,FoneCad,NumeroCad1) values (@CadastroName,@Sobrenome,@CPF,@CNPJ,@CEP,@CelularCad,@CidadeCad,@EmailCad,@EnderecoCad1,@EstadoCad,@FoneCad,@NumeroCad1)";
+
+                    cm.CommandText = strSql;
+                    cm.Connection = cn;
+
+
+                    cm.Parameters.Add("@CadastroName", SqlDbType.VarChar).Value = nome;
+                    cm.Parameters.Add("@Sobrenome", SqlDbType.VarChar).Value = sobrenome;
+                    cm.Parameters.Add("@CPF", SqlDbType.VarChar).Value = cpf;
+                    cm.Parameters.Add("@CNPJ", SqlDbType.VarChar).Value = cnpj;
+                    cm.Parameters.Add("@CEP", SqlDbType.VarChar).Value = cep;
+                    cm.Parameters.Add("@CelularCad", SqlDbType.VarChar).Value = celular;
+                    cm.Parameters.Add("@CidadeCad", SqlDbType.VarChar).Value = cidade;
+                    cm.Parameters.Add("@EmailCad", SqlDbType.VarChar).Value = email;
+                    cm.Parameters.Add("@EnderecoCad1", SqlDbType.VarChar).Value = endereco;
+                    cm.Parameters.Add("@EstadoCad", SqlDbType.VarChar).Value = estado;
+                    cm.Parameters.Add("@FoneCad", SqlDbType.VarChar).Value = fone;
+                    cm.Parameters.Add("@NumeroCad1", SqlDbType.VarChar).Value = numero;
+
+
+                    cn.Open();
+                    cm.ExecuteNonQuery();
+
+                    cm.Parameters.Clear();
+
+                    MessageBox.Show("Dados Salvos com sucesso!!!!.", "Alteração de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNomeCad.Focus();
+                    limparCampos();
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+                    cn.Close();
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
         }
     }
 }

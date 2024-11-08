@@ -61,8 +61,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioAtivo = new System.Windows.Forms.RadioButton();
+            this.radioInativo = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCelularCad = new System.Windows.Forms.MaskedTextBox();
             this.txtFoneCad = new System.Windows.Forms.MaskedTextBox();
@@ -331,6 +331,7 @@
             this.buttonSalvarCad.TabIndex = 32;
             this.buttonSalvarCad.Text = "Salvar";
             this.buttonSalvarCad.UseVisualStyleBackColor = true;
+            this.buttonSalvarCad.Click += new System.EventHandler(this.buttonSalvarCad_Click);
             // 
             // buttonEditarCad
             // 
@@ -388,27 +389,27 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Status";
             // 
-            // radioButton1
+            // radioAtivo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(220, 98);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 28);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ativo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioAtivo.AutoSize = true;
+            this.radioAtivo.Checked = true;
+            this.radioAtivo.Location = new System.Drawing.Point(220, 98);
+            this.radioAtivo.Name = "radioAtivo";
+            this.radioAtivo.Size = new System.Drawing.Size(70, 28);
+            this.radioAtivo.TabIndex = 1;
+            this.radioAtivo.TabStop = true;
+            this.radioAtivo.Text = "Ativo";
+            this.radioAtivo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioInativo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(220, 132);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 28);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = "Inativo";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioInativo.AutoSize = true;
+            this.radioInativo.Location = new System.Drawing.Point(220, 132);
+            this.radioInativo.Name = "radioInativo";
+            this.radioInativo.Size = new System.Drawing.Size(82, 28);
+            this.radioInativo.TabIndex = 2;
+            this.radioInativo.Text = "Inativo";
+            this.radioInativo.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -458,7 +459,7 @@
             // 
             // txtCnpjCad
             // 
-            this.txtCnpjCad.Location = new System.Drawing.Point(656, 178);
+            this.txtCnpjCad.Location = new System.Drawing.Point(656, 177);
             this.txtCnpjCad.Mask = "00.000.000/0000-00";
             this.txtCnpjCad.Name = "txtCnpjCad";
             this.txtCnpjCad.Size = new System.Drawing.Size(196, 30);
@@ -602,8 +603,8 @@
             this.Controls.Add(this.txtFoneCad);
             this.Controls.Add(this.txtCelularCad);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioInativo);
+            this.Controls.Add(this.radioAtivo);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -684,8 +685,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioAtivo;
+        private System.Windows.Forms.RadioButton radioInativo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtCelularCad;
         private System.Windows.Forms.MaskedTextBox txtFoneCad;
