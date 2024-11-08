@@ -268,7 +268,7 @@ namespace AgroByte_Desktop
                
 
             }
-            else if (txtCpfCad.Text.Length < 14)
+            else if (CbTipoCad.SelectedIndex == 0 && txtCpfCad.Text.Length < 14)
             {
                                        
                     MessageBox.Show("Obrigatório informar Cpf válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
