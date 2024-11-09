@@ -133,9 +133,39 @@ namespace AgroByte_Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bloqueado_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bloqueado-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bloqueado_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bloqueado-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cancelar_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cancelar-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +296,16 @@ namespace AgroByte_Desktop.Properties {
         internal static System.Drawing.Bitmap icons8_novo {
             get {
                 object obj = ResourceManager.GetObject("icons8-novo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_novo_arquivo_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-novo-arquivo-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

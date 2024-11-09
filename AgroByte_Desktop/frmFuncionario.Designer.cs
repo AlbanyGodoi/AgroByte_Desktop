@@ -246,7 +246,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(31, 527);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 229);
+            this.panel1.Size = new System.Drawing.Size(253, 229);
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -273,7 +273,7 @@
             this.buttonCancelarFunc.AutoSize = true;
             this.buttonCancelarFunc.BackColor = System.Drawing.SystemColors.Info;
             this.buttonCancelarFunc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelarFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_16;
+            this.buttonCancelarFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_30;
             this.buttonCancelarFunc.Location = new System.Drawing.Point(892, 544);
             this.buttonCancelarFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonCancelarFunc.Name = "buttonCancelarFunc";
@@ -287,14 +287,14 @@
             // buttonExcluirFunc
             // 
             this.buttonExcluirFunc.BackColor = System.Drawing.Color.Salmon;
-            this.buttonExcluirFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluirFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_full_trash_28;
+            this.buttonExcluirFunc.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcluirFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_bloqueado_30;
             this.buttonExcluirFunc.Location = new System.Drawing.Point(892, 439);
             this.buttonExcluirFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonExcluirFunc.Name = "buttonExcluirFunc";
             this.buttonExcluirFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonExcluirFunc.TabIndex = 14;
-            this.buttonExcluirFunc.Text = "Excluir";
+            this.buttonExcluirFunc.Text = "Confirmar funcionario INATIVO";
             this.buttonExcluirFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExcluirFunc.UseVisualStyleBackColor = false;
             this.buttonExcluirFunc.Click += new System.EventHandler(this.buttonExcluirFunc_Click);
@@ -309,7 +309,7 @@
             this.buttonEditarFunc.Name = "buttonEditarFunc";
             this.buttonEditarFunc.Size = new System.Drawing.Size(227, 72);
             this.buttonEditarFunc.TabIndex = 13;
-            this.buttonEditarFunc.Text = "Editar";
+            this.buttonEditarFunc.Text = "Editar ";
             this.buttonEditarFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEditarFunc.UseVisualStyleBackColor = false;
             this.buttonEditarFunc.Click += new System.EventHandler(this.buttonEditarFunc_Click);
@@ -333,7 +333,7 @@
             // 
             this.buttonNovoFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonNovoFunc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNovoFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo;
+            this.buttonNovoFunc.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo_arquivo_30;
             this.buttonNovoFunc.Location = new System.Drawing.Point(892, 180);
             this.buttonNovoFunc.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.buttonNovoFunc.Name = "buttonNovoFunc";
@@ -373,7 +373,7 @@
             this.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "frmFuncionario";
-            this.Size = new System.Drawing.Size(1088, 1164);
+            this.Size = new System.Drawing.Size(1125, 1164);
             this.Load += new System.EventHandler(this.frmFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).EndInit();
             this.groupBoxPesquisaFunc.ResumeLayout(false);

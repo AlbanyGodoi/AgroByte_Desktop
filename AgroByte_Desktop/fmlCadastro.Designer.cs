@@ -63,7 +63,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.radioAtivo = new System.Windows.Forms.RadioButton();
             this.radioInativo = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtCelularCad = new System.Windows.Forms.MaskedTextBox();
             this.txtFoneCad = new System.Windows.Forms.MaskedTextBox();
             this.txtCepCad = new System.Windows.Forms.MaskedTextBox();
@@ -76,8 +75,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtPesquisacad = new System.Windows.Forms.TextBox();
             this.dataGridViewCad = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadastro
@@ -110,9 +110,8 @@
             this.lblCod.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCod.Location = new System.Drawing.Point(136, 177);
             this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(25, 27);
+            this.lblCod.Size = new System.Drawing.Size(0, 27);
             this.lblCod.TabIndex = 8;
-            this.lblCod.Text = "1";
             // 
             // label3
             // 
@@ -315,9 +314,9 @@
             // 
             // buttonNovoCad
             // 
-            this.buttonNovoCad.Location = new System.Drawing.Point(876, 164);
+            this.buttonNovoCad.Location = new System.Drawing.Point(876, 155);
             this.buttonNovoCad.Name = "buttonNovoCad";
-            this.buttonNovoCad.Size = new System.Drawing.Size(123, 48);
+            this.buttonNovoCad.Size = new System.Drawing.Size(132, 57);
             this.buttonNovoCad.TabIndex = 31;
             this.buttonNovoCad.Text = "Novo";
             this.buttonNovoCad.UseVisualStyleBackColor = true;
@@ -327,7 +326,7 @@
             // 
             this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
             this.buttonSalvarCad.Name = "buttonSalvarCad";
-            this.buttonSalvarCad.Size = new System.Drawing.Size(123, 48);
+            this.buttonSalvarCad.Size = new System.Drawing.Size(132, 60);
             this.buttonSalvarCad.TabIndex = 32;
             this.buttonSalvarCad.Text = "Salvar";
             this.buttonSalvarCad.UseVisualStyleBackColor = true;
@@ -337,25 +336,27 @@
             // 
             this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
             this.buttonEditarCad.Name = "buttonEditarCad";
-            this.buttonEditarCad.Size = new System.Drawing.Size(128, 51);
+            this.buttonEditarCad.Size = new System.Drawing.Size(132, 63);
             this.buttonEditarCad.TabIndex = 33;
             this.buttonEditarCad.Text = "Editar";
             this.buttonEditarCad.UseVisualStyleBackColor = true;
+            this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
             // 
             // buttonInativoCad
             // 
-            this.buttonInativoCad.Location = new System.Drawing.Point(877, 338);
+            this.buttonInativoCad.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInativoCad.Location = new System.Drawing.Point(877, 349);
             this.buttonInativoCad.Name = "buttonInativoCad";
-            this.buttonInativoCad.Size = new System.Drawing.Size(128, 50);
+            this.buttonInativoCad.Size = new System.Drawing.Size(131, 60);
             this.buttonInativoCad.TabIndex = 34;
-            this.buttonInativoCad.Text = "Inativar Status";
+            this.buttonInativoCad.Text = "Confirmar funcionario Inativo";
             this.buttonInativoCad.UseVisualStyleBackColor = true;
             // 
             // buttonCancelarCad
             // 
-            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 402);
+            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 415);
             this.buttonCancelarCad.Name = "buttonCancelarCad";
-            this.buttonCancelarCad.Size = new System.Drawing.Size(129, 50);
+            this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
             this.buttonCancelarCad.TabIndex = 35;
             this.buttonCancelarCad.Text = "Cancelar";
             this.buttonCancelarCad.UseVisualStyleBackColor = true;
@@ -410,16 +411,6 @@
             this.radioInativo.TabIndex = 2;
             this.radioInativo.Text = "Inativo";
             this.radioInativo.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AgroByte_Desktop.Properties.Resources.download__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
             // 
             // txtCelularCad
             // 
@@ -553,9 +544,9 @@
             // 
             // buttonExcluirCad
             // 
-            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 458);
+            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 475);
             this.buttonExcluirCad.Name = "buttonExcluirCad";
-            this.buttonExcluirCad.Size = new System.Drawing.Size(131, 50);
+            this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
             this.buttonExcluirCad.TabIndex = 50;
             this.buttonExcluirCad.Text = "Excluir";
             this.buttonExcluirCad.UseVisualStyleBackColor = true;
@@ -575,6 +566,7 @@
             this.txtPesquisacad.Name = "txtPesquisacad";
             this.txtPesquisacad.Size = new System.Drawing.Size(711, 30);
             this.txtPesquisacad.TabIndex = 52;
+            this.txtPesquisacad.TextChanged += new System.EventHandler(this.txtPesquisacad_TextChanged);
             // 
             // dataGridViewCad
             // 
@@ -585,6 +577,16 @@
             this.dataGridViewCad.RowTemplate.Height = 24;
             this.dataGridViewCad.Size = new System.Drawing.Size(711, 150);
             this.dataGridViewCad.TabIndex = 53;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AgroByte_Desktop.Properties.Resources.download__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
             // 
             // fmlCadastro
             // 
@@ -643,8 +645,8 @@
             this.Name = "fmlCadastro";
             this.Size = new System.Drawing.Size(1057, 660);
             this.Load += new System.EventHandler(this.fmlCadastro_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

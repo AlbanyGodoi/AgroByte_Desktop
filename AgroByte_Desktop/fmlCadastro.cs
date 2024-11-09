@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 
 namespace AgroByte_Desktop
@@ -342,6 +343,108 @@ namespace AgroByte_Desktop
                     cn.Close();
                 }
             }
+        }
+
+        private void buttonEditarCad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                string cpf = txtCpfCad.Text;
+                string cnpj = txtCnpjCad.Text;
+                string nome = txtNomeCad.Text;
+                string sobrenome = txtSobrenomeCad.Text;
+                string endereco = txtEndCad.Text;
+                string numero = txtNumCad.Text;
+                string bairro = txtBairroCad.Text;
+                string cidade = txtCidadeCad.Text;
+                string cep = txtCepCad.Text;
+                string estado = CbEstadoCad.SelectedItem.ToString();
+                string email = txtEmailCad.Text;
+                string celular = txtCelularCad.Text;
+                string fone = txtFoneCad.Text;
+                int cd = Convert.ToInt32(lblCod.Text);
+
+                string strSql = "update cadastros set CadastroName=@nome,Sobrenome=@sobrenome,CPF=@cpf,CNPJ=@cnpj,CEP=@cep,CelularCad=celular,CidadeCad=@cidade,EmailCad=@email,EnderecoCad1=@endereco,EstadoCad=@estado,FoneCad=@fone,NumeroCad1=@numero where CadastroId=@cd";
+
+                //string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario, status = 1 where SenhaID=@cd ";
+                cm.CommandText = strSql;
+                cm.Connection = cn;
+
+
+                cm.Parameters.Add("@CadastroName", SqlDbType.VarChar).Value = nome;
+                cm.Parameters.Add("@Sobrenome", SqlDbType.VarChar).Value = sobrenome;
+                cm.Parameters.Add("@CPF", SqlDbType.VarChar).Value = cpf;
+                cm.Parameters.Add("@CNPJ", SqlDbType.VarChar).Value = cnpj;
+                cm.Parameters.Add("@CEP", SqlDbType.VarChar).Value = cep;
+                cm.Parameters.Add("@CelularCad", SqlDbType.VarChar).Value = celular;
+                cm.Parameters.Add("@CidadeCad", SqlDbType.VarChar).Value = cidade;
+                cm.Parameters.Add("@EmailCad", SqlDbType.VarChar).Value = email;
+                cm.Parameters.Add("@EnderecoCad1", SqlDbType.VarChar).Value = endereco;
+                cm.Parameters.Add("@EstadoCad", SqlDbType.VarChar).Value = estado;
+                cm.Parameters.Add("@FoneCad", SqlDbType.VarChar).Value = fone;
+                cm.Parameters.Add("@NumeroCad1", SqlDbType.VarChar).Value = numero;
+
+
+                cn.Open();
+                cm.ExecuteNonQuery();
+
+                cm.Parameters.Clear();
+
+                MessageBox.Show("Dados Salvos com sucesso!!!!.", "Alteração de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNomeCad.Focus();
+                limparCampos();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+                cn.Close();
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void txtPesquisacad_TextChanged(object sender, EventArgs e)
+        {
+
+
+            if (txtPesquisacad.Text != "")
+            {
+                try
+                {
+                    cn.Open();
+                    cm.CommandText = "select * from VWCadadastro where CadastroName like ('" + txtPesquisacad.Text + "%')";
+                    cm.Connection = cn;
+
+
+
+                    SqlDataAdapter da = new SqlDataAdapter(); // recebe os dados de uma tabela após a execução de um select
+
+                    DataTable dt = new DataTable(); // representa uma ou mais tabela de dados que ficam na memoria para serem manipuladas
+
+                    da.SelectCommand = cm; // pega o resultado do select e inclui no da
+                    da.Fill(dt);// preencher a tabela 
+                    dataGridViewCad.DataSource = dt; // envia para o dataGridFunc a tabela
+                    cn.Close(); // fecha a conexão com o banco de dados
+
+
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message);
+
+                }
+
+
+            }
+            else
+            {
+                dataGridViewCad.DataSource = null;
+            }
+
         }
     }
 }
