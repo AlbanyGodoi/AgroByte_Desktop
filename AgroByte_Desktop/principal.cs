@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace AgroByte_Desktop
 {
-    public partial class principal1 : UserControl
+    public partial class principal2 : UserControl
     {
-        public principal1()
+        public principal2()
         {
             InitializeComponent();
         }

@@ -26,6 +26,7 @@ namespace AgroByte_Desktop
         private void frmMenu_Load(object sender, EventArgs e)
         {
             
+
         }
 
         private void principal1_Load(object sender, EventArgs e)
@@ -40,14 +41,28 @@ namespace AgroByte_Desktop
 
         private void buttonCadastro_Click(object sender, EventArgs e)
         {
+            
+            fmlCadastro1.Show();
             fmlCadastro1.BringToFront();
 
         }
 
         private void buttonFuncionario_Click(object sender, EventArgs e)
         {
+            frmFuncionario1.Show();
             frmFuncionario1.BringToFront();
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TelaInicial_Click(object sender, EventArgs e)
+        {
+            
+            principal21.BringToFront();
         }
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="principal.Designer.cs">
       <DependentUpon>principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Principal1.Designer.cs">
+      <DependentUpon>Principal1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastro.resx">
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal1.resx">
+      <DependentUpon>Principal1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

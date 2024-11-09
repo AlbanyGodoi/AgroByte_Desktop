@@ -596,6 +596,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.dataGridViewCad);
             this.Controls.Add(this.txtPesquisacad);
             this.Controls.Add(this.label21);
@@ -647,7 +648,7 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmlCadastro";
-            this.Size = new System.Drawing.Size(1057, 660);
+            this.Size = new System.Drawing.Size(1057, 721);
             this.Load += new System.EventHandler(this.fmlCadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -244,9 +244,9 @@
             // 
             this.panel1.Controls.Add(this.lblUsuariologado);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(31, 527);
+            this.panel1.Location = new System.Drawing.Point(31, 477);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 229);
+            this.panel1.Size = new System.Drawing.Size(251, 220);
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
