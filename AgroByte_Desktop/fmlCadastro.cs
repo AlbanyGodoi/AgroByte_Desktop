@@ -115,6 +115,22 @@ namespace AgroByte_Desktop
             lblCodigo.Visible = true;
             lblCod.Visible = true;
 
+            txtNomeCad.Enabled = true;
+            txtSobrenomeCad.Enabled=true;
+            txtEndCad.Enabled=true;
+            txtEmailCad.Enabled=true;
+            txtNumCad.Enabled = true;
+            txtBairroCad.Enabled=true;
+            txtCidadeCad.Enabled=true;
+            txtCelularCad.Enabled=true ;
+            txtFoneCad .Enabled = true;
+            CbEstadoCad .Enabled = true;
+            CbTipoCad .Enabled = true;
+            txtCepCad .Enabled = true;
+            txtCnpjCad .Enabled = true;
+            txtCpfCad .Enabled = true;
+
+
 
             buttonEditarCad.Enabled = true;
             buttonCancelarCad.Enabled = true;
@@ -288,7 +304,7 @@ namespace AgroByte_Desktop
                 try
                 {
 
-
+                    string tipo = CbTipoCad.SelectedItem.ToString();
                     string cpf = txtCpfCad.Text;
                     string cnpj = txtCnpjCad.Text;
                     string nome = txtNomeCad.Text;
@@ -304,7 +320,7 @@ namespace AgroByte_Desktop
                     string fone = txtFoneCad.Text;
                     
 
-                    string strSql = "insert into cadastros(CadastroName,Sobrenome,CPF,CNPJ,CEP,CelularCad,CidadeCad,EmailCad,EnderecoCad1,EstadoCad,FoneCad,NumeroCad1) values (@CadastroName,@Sobrenome,@CPF,@CNPJ,@CEP,@CelularCad,@CidadeCad,@EmailCad,@EnderecoCad1,@EstadoCad,@FoneCad,@NumeroCad1)";
+                    string strSql = "insert into cadastros(CadastroName,Sobrenome,CPF,CNPJ,CEP,CelularCad,CidadeCad,EmailCad,EnderecoCad1,EstadoCad,FoneCad,NumeroCad1,tipo,bairro) values (@CadastroName,@Sobrenome,@CPF,@CNPJ,@CEP,@CelularCad,@CidadeCad,@EmailCad,@EnderecoCad1,@EstadoCad,@FoneCad,@NumeroCad1,@tipo,@bairro)";
 
                     cm.CommandText = strSql;
                     cm.Connection = cn;
@@ -322,7 +338,8 @@ namespace AgroByte_Desktop
                     cm.Parameters.Add("@EstadoCad", SqlDbType.VarChar).Value = estado;
                     cm.Parameters.Add("@FoneCad", SqlDbType.VarChar).Value = fone;
                     cm.Parameters.Add("@NumeroCad1", SqlDbType.VarChar).Value = numero;
-
+                    cm.Parameters.Add("@tipo", SqlDbType.VarChar).Value = tipo;
+                    cm.Parameters.Add("@bairro", SqlDbType.VarChar).Value = bairro;
 
                     cn.Open();
                     cm.ExecuteNonQuery();
@@ -366,7 +383,7 @@ namespace AgroByte_Desktop
                 string fone = txtFoneCad.Text;
                 int cd = Convert.ToInt32(lblCod.Text);
 
-                string strSql = "update cadastros set CadastroName=@nome,Sobrenome=@sobrenome,CPF=@cpf,CNPJ=@cnpj,CEP=@cep,CelularCad=celular,CidadeCad=@cidade,EmailCad=@email,EnderecoCad1=@endereco,EstadoCad=@estado,FoneCad=@fone,NumeroCad1=@numero where CadastroId=@cd";
+                string strSql = "update cadastros set CadastroName=@nome,Sobrenome=@sobrenome,CPF=@cpf,CNPJ=@cnpj,CEP=@cep,CelularCad=celular,CidadeCad=@cidade,EmailCad=@email,EnderecoCad1=@endereco,EstadoCad=@estado,FoneCad=@fone,NumeroCad1=@numero,bairro=@bairro where CadastroId=@cd";
 
                 //string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario, status = 1 where SenhaID=@cd ";
                 cm.CommandText = strSql;
@@ -385,7 +402,7 @@ namespace AgroByte_Desktop
                 cm.Parameters.Add("@EstadoCad", SqlDbType.VarChar).Value = estado;
                 cm.Parameters.Add("@FoneCad", SqlDbType.VarChar).Value = fone;
                 cm.Parameters.Add("@NumeroCad1", SqlDbType.VarChar).Value = numero;
-
+                cm.Parameters.Add("@bairro", SqlDbType.VarChar).Value = bairro;
 
                 cn.Open();
                 cm.ExecuteNonQuery();
@@ -416,7 +433,7 @@ namespace AgroByte_Desktop
                 try
                 {
                     cn.Open();
-                    cm.CommandText = "select * from VWCadadastro where CadastroName like ('" + txtPesquisacad.Text + "%')";
+                    cm.CommandText = "select * from VWCadastro2 where CadastroName like ('" + txtPesquisacad.Text + "%')";
                     cm.Connection = cn;
 
 
@@ -444,6 +461,65 @@ namespace AgroByte_Desktop
             {
                 dataGridViewCad.DataSource = null;
             }
+
+
+            
+
+        }
+       
+
+        private void carregaCadastro()
+        {
+            if (dataGridViewCad.SelectedRows.Count > 0)
+            {
+                // Garantir que a linha selecionada seja a primeira linha
+                DataGridViewRow selectedRow = dataGridViewCad.SelectedRows[0];
+
+                // Agora atribuímos os valores das células para os campos
+                txtNomeCad.Text = selectedRow.Cells[1].Value.ToString();
+                txtSobrenomeCad.Text = selectedRow.Cells[2].Value.ToString();
+                txtCpfCad.Text = selectedRow.Cells[3].Value.ToString();
+                txtCnpjCad.Text = selectedRow.Cells[4].Value.ToString();
+                txtCepCad.Text = selectedRow.Cells[5].Value.ToString();
+                txtCelularCad.Text = selectedRow.Cells[6].Value.ToString();
+                txtCidadeCad.Text = selectedRow.Cells[7].Value.ToString();
+                txtEmailCad.Text = selectedRow.Cells[8].Value.ToString();
+                txtEndCad.Text = selectedRow.Cells[9].Value.ToString();
+                CbEstadoCad.Text = selectedRow.Cells[10].Value.ToString();
+                txtFoneCad.Text = selectedRow.Cells[11].Value.ToString();
+                txtNumCad.Text = selectedRow.Cells[12].Value.ToString();
+                CbTipoCad.Text = selectedRow.Cells[13].Value.ToString();
+                txtBairroCad.Text = selectedRow.Cells[14].Value.ToString();
+
+                manipularDados();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+        private void dataGridViewCad_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewCad_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // Certifique-se de que a linha que está sendo clicada seja a linha inteira
+            if (dataGridViewCad.SelectedRows.Count > 0)
+            {
+                carregaCadastro();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dataGridViewCad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

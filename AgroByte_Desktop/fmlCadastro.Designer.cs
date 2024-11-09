@@ -97,7 +97,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(44, 178);
+            this.lblCodigo.Location = new System.Drawing.Point(44, 174);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(85, 27);
@@ -128,7 +128,7 @@
             this.txtNomeCad.Location = new System.Drawing.Point(49, 248);
             this.txtNomeCad.Name = "txtNomeCad";
             this.txtNomeCad.Size = new System.Drawing.Size(419, 30);
-            this.txtNomeCad.TabIndex = 10;
+            this.txtNomeCad.TabIndex = 7;
             // 
             // label4
             // 
@@ -165,7 +165,7 @@
             this.txtSobrenomeCad.Location = new System.Drawing.Point(488, 248);
             this.txtSobrenomeCad.Name = "txtSobrenomeCad";
             this.txtSobrenomeCad.Size = new System.Drawing.Size(364, 30);
-            this.txtSobrenomeCad.TabIndex = 12;
+            this.txtSobrenomeCad.TabIndex = 8;
             // 
             // label7
             // 
@@ -282,42 +282,42 @@
             this.txtEndCad.Location = new System.Drawing.Point(48, 305);
             this.txtEndCad.Name = "txtEndCad";
             this.txtEndCad.Size = new System.Drawing.Size(419, 30);
-            this.txtEndCad.TabIndex = 14;
+            this.txtEndCad.TabIndex = 9;
             // 
             // txtNumCad
             // 
             this.txtNumCad.Location = new System.Drawing.Point(482, 305);
             this.txtNumCad.Name = "txtNumCad";
             this.txtNumCad.Size = new System.Drawing.Size(100, 30);
-            this.txtNumCad.TabIndex = 16;
+            this.txtNumCad.TabIndex = 10;
             // 
             // txtBairroCad
             // 
             this.txtBairroCad.Location = new System.Drawing.Point(617, 305);
             this.txtBairroCad.Name = "txtBairroCad";
             this.txtBairroCad.Size = new System.Drawing.Size(235, 30);
-            this.txtBairroCad.TabIndex = 18;
+            this.txtBairroCad.TabIndex = 11;
             // 
             // txtCidadeCad
             // 
             this.txtCidadeCad.Location = new System.Drawing.Point(49, 366);
             this.txtCidadeCad.Name = "txtCidadeCad";
             this.txtCidadeCad.Size = new System.Drawing.Size(419, 30);
-            this.txtCidadeCad.TabIndex = 20;
+            this.txtCidadeCad.TabIndex = 12;
             // 
             // txtEmailCad
             // 
             this.txtEmailCad.Location = new System.Drawing.Point(48, 426);
             this.txtEmailCad.Name = "txtEmailCad";
             this.txtEmailCad.Size = new System.Drawing.Size(419, 30);
-            this.txtEmailCad.TabIndex = 26;
+            this.txtEmailCad.TabIndex = 15;
             // 
             // buttonNovoCad
             // 
             this.buttonNovoCad.Location = new System.Drawing.Point(876, 155);
             this.buttonNovoCad.Name = "buttonNovoCad";
             this.buttonNovoCad.Size = new System.Drawing.Size(132, 57);
-            this.buttonNovoCad.TabIndex = 31;
+            this.buttonNovoCad.TabIndex = 18;
             this.buttonNovoCad.Text = "Novo";
             this.buttonNovoCad.UseVisualStyleBackColor = true;
             this.buttonNovoCad.Click += new System.EventHandler(this.buttonNovoCad_Click);
@@ -327,7 +327,7 @@
             this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
             this.buttonSalvarCad.Name = "buttonSalvarCad";
             this.buttonSalvarCad.Size = new System.Drawing.Size(132, 60);
-            this.buttonSalvarCad.TabIndex = 32;
+            this.buttonSalvarCad.TabIndex = 19;
             this.buttonSalvarCad.Text = "Salvar";
             this.buttonSalvarCad.UseVisualStyleBackColor = true;
             this.buttonSalvarCad.Click += new System.EventHandler(this.buttonSalvarCad_Click);
@@ -337,7 +337,7 @@
             this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
             this.buttonEditarCad.Name = "buttonEditarCad";
             this.buttonEditarCad.Size = new System.Drawing.Size(132, 63);
-            this.buttonEditarCad.TabIndex = 33;
+            this.buttonEditarCad.TabIndex = 20;
             this.buttonEditarCad.Text = "Editar";
             this.buttonEditarCad.UseVisualStyleBackColor = true;
             this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
@@ -348,7 +348,7 @@
             this.buttonInativoCad.Location = new System.Drawing.Point(877, 349);
             this.buttonInativoCad.Name = "buttonInativoCad";
             this.buttonInativoCad.Size = new System.Drawing.Size(131, 60);
-            this.buttonInativoCad.TabIndex = 34;
+            this.buttonInativoCad.TabIndex = 21;
             this.buttonInativoCad.Text = "Confirmar funcionario Inativo";
             this.buttonInativoCad.UseVisualStyleBackColor = true;
             // 
@@ -357,7 +357,7 @@
             this.buttonCancelarCad.Location = new System.Drawing.Point(876, 415);
             this.buttonCancelarCad.Name = "buttonCancelarCad";
             this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
-            this.buttonCancelarCad.TabIndex = 35;
+            this.buttonCancelarCad.TabIndex = 22;
             this.buttonCancelarCad.Text = "Cancelar";
             this.buttonCancelarCad.UseVisualStyleBackColor = true;
             this.buttonCancelarCad.Click += new System.EventHandler(this.buttonCancelarCad_Click);
@@ -419,7 +419,7 @@
             this.txtCelularCad.Mask = "(00)00000-0000";
             this.txtCelularCad.Name = "txtCelularCad";
             this.txtCelularCad.Size = new System.Drawing.Size(179, 30);
-            this.txtCelularCad.TabIndex = 42;
+            this.txtCelularCad.TabIndex = 16;
             // 
             // txtFoneCad
             // 
@@ -428,7 +428,7 @@
             this.txtFoneCad.Mask = "(00)0000-0000";
             this.txtFoneCad.Name = "txtFoneCad";
             this.txtFoneCad.Size = new System.Drawing.Size(165, 30);
-            this.txtFoneCad.TabIndex = 43;
+            this.txtFoneCad.TabIndex = 17;
             // 
             // txtCepCad
             // 
@@ -437,7 +437,7 @@
             this.txtCepCad.Mask = "00000-000";
             this.txtCepCad.Name = "txtCepCad";
             this.txtCepCad.Size = new System.Drawing.Size(235, 30);
-            this.txtCepCad.TabIndex = 44;
+            this.txtCepCad.TabIndex = 14;
             // 
             // txtCpfCad
             // 
@@ -454,7 +454,7 @@
             this.txtCnpjCad.Mask = "00.000.000/0000-00";
             this.txtCnpjCad.Name = "txtCnpjCad";
             this.txtCnpjCad.Size = new System.Drawing.Size(196, 30);
-            this.txtCnpjCad.TabIndex = 46;
+            this.txtCnpjCad.TabIndex = 6;
             this.txtCnpjCad.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCnpjCad.Visible = false;
             // 
@@ -464,7 +464,7 @@
             this.lblCnpj.Location = new System.Drawing.Point(656, 136);
             this.lblCnpj.Name = "lblCnpj";
             this.lblCnpj.Size = new System.Drawing.Size(59, 24);
-            this.lblCnpj.TabIndex = 47;
+            this.lblCnpj.TabIndex = 5;
             this.lblCnpj.Text = "CNPJ:";
             this.lblCnpj.Visible = false;
             // 
@@ -477,7 +477,7 @@
             this.CbTipoCad.Location = new System.Drawing.Point(488, 173);
             this.CbTipoCad.Name = "CbTipoCad";
             this.CbTipoCad.Size = new System.Drawing.Size(144, 32);
-            this.CbTipoCad.TabIndex = 48;
+            this.CbTipoCad.TabIndex = 4;
             this.CbTipoCad.SelectedIndexChanged += new System.EventHandler(this.CbTipoCad_SelectedIndexChanged);
             // 
             // CbEstadoCad
@@ -540,14 +540,14 @@
             this.CbEstadoCad.Location = new System.Drawing.Point(482, 366);
             this.CbEstadoCad.Name = "CbEstadoCad";
             this.CbEstadoCad.Size = new System.Drawing.Size(121, 32);
-            this.CbEstadoCad.TabIndex = 49;
+            this.CbEstadoCad.TabIndex = 13;
             // 
             // buttonExcluirCad
             // 
             this.buttonExcluirCad.Location = new System.Drawing.Point(877, 475);
             this.buttonExcluirCad.Name = "buttonExcluirCad";
             this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
-            this.buttonExcluirCad.TabIndex = 50;
+            this.buttonExcluirCad.TabIndex = 23;
             this.buttonExcluirCad.Text = "Excluir";
             this.buttonExcluirCad.UseVisualStyleBackColor = true;
             // 
@@ -565,7 +565,7 @@
             this.txtPesquisacad.Location = new System.Drawing.Point(141, 476);
             this.txtPesquisacad.Name = "txtPesquisacad";
             this.txtPesquisacad.Size = new System.Drawing.Size(711, 30);
-            this.txtPesquisacad.TabIndex = 52;
+            this.txtPesquisacad.TabIndex = 24;
             this.txtPesquisacad.TextChanged += new System.EventHandler(this.txtPesquisacad_TextChanged);
             // 
             // dataGridViewCad
@@ -575,8 +575,12 @@
             this.dataGridViewCad.Name = "dataGridViewCad";
             this.dataGridViewCad.RowHeadersWidth = 51;
             this.dataGridViewCad.RowTemplate.Height = 24;
+            this.dataGridViewCad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCad.Size = new System.Drawing.Size(711, 150);
-            this.dataGridViewCad.TabIndex = 53;
+            this.dataGridViewCad.TabIndex = 25;
+            this.dataGridViewCad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCad_CellContentClick);
+            this.dataGridViewCad.DoubleClick += new System.EventHandler(this.dataGridViewCad_DoubleClick);
+            this.dataGridViewCad.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCad_MouseDoubleClick);
             // 
             // pictureBox1
             // 
