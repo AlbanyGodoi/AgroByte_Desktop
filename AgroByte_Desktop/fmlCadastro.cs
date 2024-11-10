@@ -26,7 +26,7 @@ namespace AgroByte_Desktop
         private void desabilitaCampos()
         {
 
-            lblCodigo.Visible = false;
+            
             lblCod.Visible = false;
 
             txtNomeCad.Enabled = false;
@@ -40,9 +40,9 @@ namespace AgroByte_Desktop
             txtCidadeCad.Enabled = false;
             txtCnpjCad.Enabled = false;
             txtCpfCad.Enabled = false;
-            txtNumCad.Enabled=false;
-            txtBairroCad.Enabled=false;
-           CbEstadoCad.Enabled=false;
+            txtNumCad.Enabled = false;
+            txtBairroCad.Enabled = false;
+            CbEstadoCad.Enabled = false;
             CbTipoCad.Enabled = false;
 
 
@@ -93,7 +93,7 @@ namespace AgroByte_Desktop
             txtCepCad.Clear();
             txtCidadeCad.Clear();
             txtCnpjCad.Clear();
-            txtCpfCad.Clear() ;
+            txtCpfCad.Clear();
             txtNumCad.Clear();
             txtBairroCad.Clear();
             CbEstadoCad.SelectedIndex = -1;
@@ -112,23 +112,22 @@ namespace AgroByte_Desktop
         private void manipularDados()
         {
 
-            lblCodigo.Visible = true;
             lblCod.Visible = true;
 
             txtNomeCad.Enabled = true;
-            txtSobrenomeCad.Enabled=true;
-            txtEndCad.Enabled=true;
-            txtEmailCad.Enabled=true;
+            txtSobrenomeCad.Enabled = true;
+            txtEndCad.Enabled = true;
+            txtEmailCad.Enabled = true;
             txtNumCad.Enabled = true;
-            txtBairroCad.Enabled=true;
-            txtCidadeCad.Enabled=true;
-            txtCelularCad.Enabled=true ;
-            txtFoneCad .Enabled = true;
-            CbEstadoCad .Enabled = true;
-            CbTipoCad .Enabled = true;
-            txtCepCad .Enabled = true;
-            txtCnpjCad .Enabled = true;
-            txtCpfCad .Enabled = true;
+            txtBairroCad.Enabled = true;
+            txtCidadeCad.Enabled = true;
+            txtCelularCad.Enabled = true;
+            txtFoneCad.Enabled = true;
+            CbEstadoCad.Enabled = true;
+            CbTipoCad.Enabled = true;
+            txtCepCad.Enabled = true;
+            txtCnpjCad.Enabled = true;
+            txtCpfCad.Enabled = true;
 
 
 
@@ -138,7 +137,7 @@ namespace AgroByte_Desktop
             buttonSalvarCad.Enabled = false;
             buttonNovoCad.Enabled = false;
             txtNomeCad.Enabled = true;
-           
+
         }
 
 
@@ -170,7 +169,7 @@ namespace AgroByte_Desktop
 
         private void CbTipoCad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CbTipoCad.SelectedIndex == -1) // se não tiver nada selecionado
+            if (CbTipoCad.SelectedIndex == -1) // se não tiver nada selecionado
             {
                 lblCnpj.Visible = false;
                 txtCnpjCad.Visible = false;
@@ -203,13 +202,10 @@ namespace AgroByte_Desktop
 
         private void buttonSalvarCad_Click(object sender, EventArgs e)
         {
-            if (radioInativo.Checked)
-            {
-                MessageBox.Show("Para inserir um cadastro o status teve estar como ATIVO!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                radioAtivo.Checked = true;
-            }
 
-            else if(txtNomeCad.Text == "")
+
+
+             if (txtNomeCad.Text == "")
             {
                 MessageBox.Show("Obrigatorio informar o Campo Nome!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNomeCad.Focus();
@@ -260,10 +256,10 @@ namespace AgroByte_Desktop
                 txtCelularCad.Focus();
             }
 
-            else if(CbTipoCad.SelectedIndex == -1) 
+            else if (CbTipoCad.SelectedIndex == -1)
             {
                 MessageBox.Show("Informar o tipo de cadastro!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
             }
 
             //else if (CbTipoCad.SelectedIndex == 0 && txtCpfCad.Text.Length < 11)
@@ -278,23 +274,23 @@ namespace AgroByte_Desktop
 
             else if (CbTipoCad.SelectedIndex == 1 && txtCnpjCad.Text.Length < 14)
             {
-                
-                
-                    MessageBox.Show("Obrigatório informar CNPJ válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCnpjCad.Focus();
-               
+
+
+                MessageBox.Show("Obrigatório informar CNPJ válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCnpjCad.Focus();
+
 
             }
             else if (CbTipoCad.SelectedIndex == 0 && txtCpfCad.Text.Length < 14)
             {
-                                       
-                    MessageBox.Show("Obrigatório informar Cpf válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CbTipoCad.Focus();
-                
-                
+
+                MessageBox.Show("Obrigatório informar Cpf válido!!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CbTipoCad.Focus();
+
+
             }
 
-            else if( CbEstadoCad.SelectedIndex == -1)
+            else if (CbEstadoCad.SelectedIndex == -1)
             {
                 MessageBox.Show("Obrigatório informar um Estado !!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -318,7 +314,7 @@ namespace AgroByte_Desktop
                     string email = txtEmailCad.Text;
                     string celular = txtCelularCad.Text;
                     string fone = txtFoneCad.Text;
-                    
+
 
                     string strSql = "insert into cadastros(CadastroName,Sobrenome,CPF,CNPJ,CEP,CelularCad,CidadeCad,EmailCad,EnderecoCad1,EstadoCad,FoneCad,NumeroCad1,tipo,bairro) values (@CadastroName,@Sobrenome,@CPF,@CNPJ,@CEP,@CelularCad,@CidadeCad,@EmailCad,@EnderecoCad1,@EstadoCad,@FoneCad,@NumeroCad1,@tipo,@bairro)";
 
@@ -366,7 +362,12 @@ namespace AgroByte_Desktop
         {
             try
             {
-
+                // Verifica se lblCod.Text tem um valor numérico válido
+                if (!int.TryParse(lblCod.Text, out int cd))
+                {
+                    MessageBox.Show("Código inválido. Por favor, selecione um registro válido para edição.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 string cpf = txtCpfCad.Text;
                 string cnpj = txtCnpjCad.Text;
@@ -377,46 +378,41 @@ namespace AgroByte_Desktop
                 string bairro = txtBairroCad.Text;
                 string cidade = txtCidadeCad.Text;
                 string cep = txtCepCad.Text;
-                string estado = CbEstadoCad.SelectedItem.ToString();
+                string estado = CbEstadoCad.SelectedItem?.ToString();
                 string email = txtEmailCad.Text;
                 string celular = txtCelularCad.Text;
                 string fone = txtFoneCad.Text;
-                int cd = Convert.ToInt32(lblCod.Text);
 
-                string strSql = "update cadastros set CadastroName=@nome,Sobrenome=@sobrenome,CPF=@cpf,CNPJ=@cnpj,CEP=@cep,CelularCad=celular,CidadeCad=@cidade,EmailCad=@email,EnderecoCad1=@endereco,EstadoCad=@estado,FoneCad=@fone,NumeroCad1=@numero,bairro=@bairro where CadastroId=@cd";
-
-                //string strSql = " update senhas set Login=@login,Senha=@senha,Usuario=@Usuario, status = 1 where SenhaID=@cd ";
+                string strSql = "UPDATE cadastros SET CadastroName=@CadastroName, Sobrenome=@Sobrenome, CPF=@CPF, CNPJ=@CNPJ, CEP=@CEP, CelularCad=@CelularCad, CidadeCad=@CidadeCad, EmailCad=@EmailCad, EnderecoCad1=@EnderecoCad1, EstadoCad=@EstadoCad, FoneCad=@FoneCad, NumeroCad1=@NumeroCad1, bairro=@bairro WHERE CadastroId=@cd";
                 cm.CommandText = strSql;
                 cm.Connection = cn;
 
-
-                cm.Parameters.Add("@CadastroName", SqlDbType.VarChar).Value = nome;
-                cm.Parameters.Add("@Sobrenome", SqlDbType.VarChar).Value = sobrenome;
-                cm.Parameters.Add("@CPF", SqlDbType.VarChar).Value = cpf;
-                cm.Parameters.Add("@CNPJ", SqlDbType.VarChar).Value = cnpj;
-                cm.Parameters.Add("@CEP", SqlDbType.VarChar).Value = cep;
-                cm.Parameters.Add("@CelularCad", SqlDbType.VarChar).Value = celular;
-                cm.Parameters.Add("@CidadeCad", SqlDbType.VarChar).Value = cidade;
-                cm.Parameters.Add("@EmailCad", SqlDbType.VarChar).Value = email;
-                cm.Parameters.Add("@EnderecoCad1", SqlDbType.VarChar).Value = endereco;
-                cm.Parameters.Add("@EstadoCad", SqlDbType.VarChar).Value = estado;
-                cm.Parameters.Add("@FoneCad", SqlDbType.VarChar).Value = fone;
-                cm.Parameters.Add("@NumeroCad1", SqlDbType.VarChar).Value = numero;
-                cm.Parameters.Add("@bairro", SqlDbType.VarChar).Value = bairro;
+                // Adicionando parâmetros
+                cm.Parameters.AddWithValue("@CadastroName", nome);
+                cm.Parameters.AddWithValue("@Sobrenome", sobrenome);
+                cm.Parameters.AddWithValue("@CPF", cpf);
+                cm.Parameters.AddWithValue("@CNPJ", cnpj);
+                cm.Parameters.AddWithValue("@CEP", cep);
+                cm.Parameters.AddWithValue("@CelularCad", celular);
+                cm.Parameters.AddWithValue("@CidadeCad", cidade);
+                cm.Parameters.AddWithValue("@EmailCad", email);
+                cm.Parameters.AddWithValue("@EnderecoCad1", endereco);
+                cm.Parameters.AddWithValue("@EstadoCad", estado);
+                cm.Parameters.AddWithValue("@FoneCad", fone);
+                cm.Parameters.AddWithValue("@NumeroCad1", numero);
+                cm.Parameters.AddWithValue("@bairro", bairro);
+                cm.Parameters.AddWithValue("@cd", cd);  // Adicionando o parâmetro cd
 
                 cn.Open();
                 cm.ExecuteNonQuery();
+                MessageBox.Show("Dados atualizados com sucesso.", "Edição Concluída", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cm.Parameters.Clear();
-
-                MessageBox.Show("Dados Salvos com sucesso!!!!.", "Alteração de dados concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNomeCad.Focus();
                 limparCampos();
             }
             catch (Exception erro)
             {
-                MessageBox.Show(erro.Message);
-                cn.Close();
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -463,10 +459,10 @@ namespace AgroByte_Desktop
             }
 
 
-            
+
 
         }
-       
+
 
         private void carregaCadastro()
         {
@@ -476,6 +472,7 @@ namespace AgroByte_Desktop
                 DataGridViewRow selectedRow = dataGridViewCad.SelectedRows[0];
 
                 // Agora atribuímos os valores das células para os campos
+                lblCod.Text = selectedRow.Cells[0].Value.ToString();
                 txtNomeCad.Text = selectedRow.Cells[1].Value.ToString();
                 txtSobrenomeCad.Text = selectedRow.Cells[2].Value.ToString();
                 txtCpfCad.Text = selectedRow.Cells[3].Value.ToString();
@@ -502,7 +499,7 @@ namespace AgroByte_Desktop
 
         private void dataGridViewCad_DoubleClick(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dataGridViewCad_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -521,6 +518,63 @@ namespace AgroByte_Desktop
         private void dataGridViewCad_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void numcad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExcluirCad_Click(object sender, EventArgs e)
+        {
+            // Verifica se um cadastro está selecionado
+            if (lblCod.Visible && int.TryParse(lblCod.Text, out int cadastroId))
+            {
+                // Confirmação do usuário antes de excluir
+                DialogResult confirmacao = MessageBox.Show(
+                    "Tem certeza de que deseja excluir este cadastro?",
+                    "Confirmação de Exclusão",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (confirmacao == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Comando SQL para excluir o cadastro pelo ID
+                        string strSql = "DELETE FROM cadastros WHERE CadastroId = @CadastroId";
+                        cm.CommandText = strSql;
+                        cm.Connection = cn;
+
+                        // Adiciona o parâmetro de ID ao comando
+                        cm.Parameters.Add("@CadastroId", SqlDbType.Int).Value = cadastroId;
+
+                        // Executa o comando
+                        cn.Open();
+                        cm.ExecuteNonQuery();
+                        cm.Parameters.Clear(); // Limpa os parâmetros para reutilizar o SqlCommand
+
+                        MessageBox.Show("Cadastro excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Limpa os campos e atualiza a visualização
+                        limparCampos();
+                        desabilitaCampos();
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show("Erro ao excluir o cadastro: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cadastro válido para exclusão.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

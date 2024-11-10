@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblCadastro = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNomeCad = new System.Windows.Forms.TextBox();
@@ -56,13 +55,9 @@
             this.buttonNovoCad = new System.Windows.Forms.Button();
             this.buttonSalvarCad = new System.Windows.Forms.Button();
             this.buttonEditarCad = new System.Windows.Forms.Button();
-            this.buttonInativoCad = new System.Windows.Forms.Button();
             this.buttonCancelarCad = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.radioAtivo = new System.Windows.Forms.RadioButton();
-            this.radioInativo = new System.Windows.Forms.RadioButton();
             this.txtCelularCad = new System.Windows.Forms.MaskedTextBox();
             this.txtFoneCad = new System.Windows.Forms.MaskedTextBox();
             this.txtCepCad = new System.Windows.Forms.MaskedTextBox();
@@ -76,6 +71,8 @@
             this.txtPesquisacad = new System.Windows.Forms.TextBox();
             this.dataGridViewCad = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblcodcad = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,25 +90,15 @@
             this.lblCadastro.Text = "Cadastro";
             this.lblCadastro.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(44, 174);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(85, 27);
-            this.lblCodigo.TabIndex = 7;
-            this.lblCodigo.Text = "Código:";
-            // 
             // lblCod
             // 
             this.lblCod.AutoSize = true;
             this.lblCod.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCod.Location = new System.Drawing.Point(136, 177);
+            this.lblCod.Location = new System.Drawing.Point(146, 168);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(0, 27);
             this.lblCod.TabIndex = 8;
+            this.lblCod.Visible = false;
             // 
             // label3
             // 
@@ -342,19 +329,9 @@
             this.buttonEditarCad.UseVisualStyleBackColor = true;
             this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
             // 
-            // buttonInativoCad
-            // 
-            this.buttonInativoCad.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInativoCad.Location = new System.Drawing.Point(877, 349);
-            this.buttonInativoCad.Name = "buttonInativoCad";
-            this.buttonInativoCad.Size = new System.Drawing.Size(131, 60);
-            this.buttonInativoCad.TabIndex = 21;
-            this.buttonInativoCad.Text = "Confirmar funcionario Inativo";
-            this.buttonInativoCad.UseVisualStyleBackColor = true;
-            // 
             // buttonCancelarCad
             // 
-            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 415);
+            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 356);
             this.buttonCancelarCad.Name = "buttonCancelarCad";
             this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
             this.buttonCancelarCad.TabIndex = 22;
@@ -379,38 +356,6 @@
             this.label19.Size = new System.Drawing.Size(48, 24);
             this.label19.TabIndex = 5;
             this.label19.Text = "CPF:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(216, 71);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 24);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Status";
-            // 
-            // radioAtivo
-            // 
-            this.radioAtivo.AutoSize = true;
-            this.radioAtivo.Checked = true;
-            this.radioAtivo.Location = new System.Drawing.Point(220, 98);
-            this.radioAtivo.Name = "radioAtivo";
-            this.radioAtivo.Size = new System.Drawing.Size(70, 28);
-            this.radioAtivo.TabIndex = 1;
-            this.radioAtivo.TabStop = true;
-            this.radioAtivo.Text = "Ativo";
-            this.radioAtivo.UseVisualStyleBackColor = true;
-            // 
-            // radioInativo
-            // 
-            this.radioInativo.AutoSize = true;
-            this.radioInativo.Location = new System.Drawing.Point(220, 132);
-            this.radioInativo.Name = "radioInativo";
-            this.radioInativo.Size = new System.Drawing.Size(82, 28);
-            this.radioInativo.TabIndex = 2;
-            this.radioInativo.Text = "Inativo";
-            this.radioInativo.UseVisualStyleBackColor = true;
             // 
             // txtCelularCad
             // 
@@ -544,12 +489,13 @@
             // 
             // buttonExcluirCad
             // 
-            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 475);
+            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 426);
             this.buttonExcluirCad.Name = "buttonExcluirCad";
             this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
             this.buttonExcluirCad.TabIndex = 23;
             this.buttonExcluirCad.Text = "Excluir";
             this.buttonExcluirCad.UseVisualStyleBackColor = true;
+            this.buttonExcluirCad.Click += new System.EventHandler(this.buttonExcluirCad_Click);
             // 
             // label21
             // 
@@ -592,11 +538,30 @@
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
+            // lblcodcad
+            // 
+            this.lblcodcad.AutoSize = true;
+            this.lblcodcad.Location = new System.Drawing.Point(152, 168);
+            this.lblcodcad.Name = "lblcodcad";
+            this.lblcodcad.Size = new System.Drawing.Size(0, 24);
+            this.lblcodcad.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(67, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Código";
+            // 
             // fmlCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblcodcad);
             this.Controls.Add(this.dataGridViewCad);
             this.Controls.Add(this.txtPesquisacad);
             this.Controls.Add(this.label21);
@@ -610,13 +575,9 @@
             this.Controls.Add(this.txtFoneCad);
             this.Controls.Add(this.txtCelularCad);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.radioInativo);
-            this.Controls.Add(this.radioAtivo);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.buttonCancelarCad);
-            this.Controls.Add(this.buttonInativoCad);
             this.Controls.Add(this.buttonEditarCad);
             this.Controls.Add(this.buttonSalvarCad);
             this.Controls.Add(this.buttonNovoCad);
@@ -643,7 +604,6 @@
             this.Controls.Add(this.txtNomeCad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCod);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblCadastro);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -660,7 +620,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblCadastro;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNomeCad;
@@ -687,13 +646,9 @@
         private System.Windows.Forms.Button buttonNovoCad;
         private System.Windows.Forms.Button buttonSalvarCad;
         private System.Windows.Forms.Button buttonEditarCad;
-        private System.Windows.Forms.Button buttonInativoCad;
         private System.Windows.Forms.Button buttonCancelarCad;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RadioButton radioAtivo;
-        private System.Windows.Forms.RadioButton radioInativo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtCelularCad;
         private System.Windows.Forms.MaskedTextBox txtFoneCad;
@@ -707,5 +662,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtPesquisacad;
         private System.Windows.Forms.DataGridView dataGridViewCad;
+        private System.Windows.Forms.Label lblcodcad;
+        private System.Windows.Forms.Label label1;
     }
 }

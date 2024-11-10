@@ -52,6 +52,7 @@
             this.buttonEditarFunc = new System.Windows.Forms.Button();
             this.buttonSalvarFunc = new System.Windows.Forms.Button();
             this.buttonNovoFunc = new System.Windows.Forms.Button();
+            this.buttonDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).BeginInit();
             this.groupBoxPesquisaFunc.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -344,11 +345,22 @@
             this.buttonNovoFunc.UseVisualStyleBackColor = false;
             this.buttonNovoFunc.Click += new System.EventHandler(this.buttonNovoFunc_Click);
             // 
+            // buttonDeletar
+            // 
+            this.buttonDeletar.Location = new System.Drawing.Point(892, 639);
+            this.buttonDeletar.Name = "buttonDeletar";
+            this.buttonDeletar.Size = new System.Drawing.Size(227, 72);
+            this.buttonDeletar.TabIndex = 22;
+            this.buttonDeletar.Text = "Excluir";
+            this.buttonDeletar.UseVisualStyleBackColor = true;
+            this.buttonDeletar.Click += new System.EventHandler(this.buttonDeletar_Click);
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.buttonDeletar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.radStInativo);
             this.Controls.Add(this.radStAtivo);
@@ -411,5 +423,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblUsuariologado;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonDeletar;
     }
 }

@@ -404,5 +404,74 @@ namespace AgroByte_Desktop
         {
             lblUsuariologado.Text = Login.usuario;
         }
+
+        private void buttonDeletar_Click(object sender, EventArgs e)
+        {
+            // Verificar se o nome do funcionário está preenchido
+            if (txtNomeFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo nome.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNomeFunc.Focus();
+            }
+            else if (txtLoginFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo login.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLoginFunc.Focus();
+            }
+            else if (txtSenhaFunc.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenhaFunc.Focus();
+            }
+            else
+            {
+                // Confirmar a exclusão com o usuário
+                DialogResult exclusao = MessageBox.Show("Tem certeza de que deseja deletar este registro?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (exclusao == DialogResult.No)
+                {
+                    return; // Se o usuário clicar em "Não", não faz nada
+                }
+                else
+                {
+                    try
+                    {
+                        int cd = Convert.ToInt32(lblCoc.Text); // Obter o ID do funcionário selecionado
+
+                        // Abrir a conexão com o banco de dados
+                        cn.Open();
+
+                        // Comando SQL para excluir permanentemente o funcionário
+                        string strSql = "DELETE FROM senhas WHERE SenhaID = @cd";
+
+                        // Definir o comando e a conexão
+                        cm.CommandText = strSql;
+                        cm.Connection = cn;
+                        cm.Parameters.Add("@cd", SqlDbType.Int).Value = cd;
+
+                        // Executar a exclusão
+                        cm.ExecuteNonQuery();
+
+                        // Limpar os parâmetros
+                        cm.Parameters.Clear();
+
+                        // Informar o sucesso da exclusão
+                        MessageBox.Show("Funcionário deletado com sucesso!", "Exclusão concluída", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Limpar os campos e atualizar a interface
+                        limparCampos();
+                    }
+                    catch (Exception erro)
+                    {
+                        // Exibir mensagem de erro caso haja falha
+                        MessageBox.Show(erro.Message);
+                    }
+                    finally
+                    {
+                        // Fechar a conexão com o banco de dados
+                        cn.Close();
+                    }
+                }
+            }
+        }
     }
 }

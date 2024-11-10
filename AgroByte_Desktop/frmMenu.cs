@@ -22,10 +22,16 @@ namespace AgroByte_Desktop
             this.Hide();
         }
 
+        //private void MainForm_Load(object sender, EventArgs e)
+        //{
+            
+        //}
+
+
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            
+            principal21.BringToFront();
 
         }
 
@@ -63,6 +69,11 @@ namespace AgroByte_Desktop
         {
             
             principal21.BringToFront();
+        }
+
+        private void buttonRelatorio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
