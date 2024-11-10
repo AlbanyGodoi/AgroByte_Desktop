@@ -73,7 +73,7 @@ namespace AgroByte_Desktop
 
         private void buttonRelatorio_Click(object sender, EventArgs e)
         {
-
+            relatorioCadastros1.BringToFront();
         }
     }
 }

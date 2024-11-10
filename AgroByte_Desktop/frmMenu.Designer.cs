@@ -39,6 +39,7 @@
             this.fmlCadastro1 = new AgroByte_Desktop.fmlCadastro();
             this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
             this.principal21 = new AgroByte_Desktop.principal2();
+            this.relatorioCadastros1 = new AgroByte_Desktop.RelatorioCadastros();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -147,6 +148,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.relatorioCadastros1);
             this.panel1.Controls.Add(this.fmlCadastro1);
             this.panel1.Controls.Add(this.frmFuncionario1);
             this.panel1.Controls.Add(this.principal21);
@@ -173,7 +175,7 @@
             this.frmFuncionario1.Location = new System.Drawing.Point(0, 0);
             this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.frmFuncionario1.Name = "frmFuncionario1";
-            this.frmFuncionario1.Size = new System.Drawing.Size(1125, 700);
+            this.frmFuncionario1.Size = new System.Drawing.Size(1125, 714);
             this.frmFuncionario1.TabIndex = 1;
             // 
             // principal21
@@ -184,6 +186,13 @@
             this.principal21.Name = "principal21";
             this.principal21.Size = new System.Drawing.Size(1110, 965);
             this.principal21.TabIndex = 0;
+            // 
+            // relatorioCadastros1
+            // 
+            this.relatorioCadastros1.Location = new System.Drawing.Point(0, 0);
+            this.relatorioCadastros1.Name = "relatorioCadastros1";
+            this.relatorioCadastros1.Size = new System.Drawing.Size(1290, 648);
+            this.relatorioCadastros1.TabIndex = 3;
             // 
             // frmMenu
             // 
@@ -220,5 +229,6 @@
         private fmlCadastro fmlCadastro1;
         private frmFuncionario frmFuncionario1;
         private principal2 principal21;
+        private RelatorioCadastros relatorioCadastros1;
     }
 }
