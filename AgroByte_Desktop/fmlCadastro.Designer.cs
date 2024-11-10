@@ -52,10 +52,6 @@
             this.txtBairroCad = new System.Windows.Forms.TextBox();
             this.txtCidadeCad = new System.Windows.Forms.TextBox();
             this.txtEmailCad = new System.Windows.Forms.TextBox();
-            this.buttonNovoCad = new System.Windows.Forms.Button();
-            this.buttonSalvarCad = new System.Windows.Forms.Button();
-            this.buttonEditarCad = new System.Windows.Forms.Button();
-            this.buttonCancelarCad = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtCelularCad = new System.Windows.Forms.MaskedTextBox();
@@ -66,13 +62,17 @@
             this.lblCnpj = new System.Windows.Forms.Label();
             this.CbTipoCad = new System.Windows.Forms.ComboBox();
             this.CbEstadoCad = new System.Windows.Forms.ComboBox();
-            this.buttonExcluirCad = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.txtPesquisacad = new System.Windows.Forms.TextBox();
             this.dataGridViewCad = new System.Windows.Forms.DataGridView();
             this.lblcodcad = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonExcluirCad = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonCancelarCad = new System.Windows.Forms.Button();
+            this.buttonEditarCad = new System.Windows.Forms.Button();
+            this.buttonSalvarCad = new System.Windows.Forms.Button();
+            this.buttonNovoCad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -299,58 +299,6 @@
             this.txtEmailCad.Size = new System.Drawing.Size(419, 30);
             this.txtEmailCad.TabIndex = 15;
             // 
-            // buttonNovoCad
-            // 
-            this.buttonNovoCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.buttonNovoCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo_arquivo_30;
-            this.buttonNovoCad.Location = new System.Drawing.Point(876, 155);
-            this.buttonNovoCad.Name = "buttonNovoCad";
-            this.buttonNovoCad.Size = new System.Drawing.Size(132, 57);
-            this.buttonNovoCad.TabIndex = 18;
-            this.buttonNovoCad.Text = "Novo";
-            this.buttonNovoCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonNovoCad.UseVisualStyleBackColor = false;
-            this.buttonNovoCad.Click += new System.EventHandler(this.buttonNovoCad_Click);
-            // 
-            // buttonSalvarCad
-            // 
-            this.buttonSalvarCad.BackColor = System.Drawing.Color.Lime;
-            this.buttonSalvarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_salvar;
-            this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
-            this.buttonSalvarCad.Name = "buttonSalvarCad";
-            this.buttonSalvarCad.Size = new System.Drawing.Size(132, 60);
-            this.buttonSalvarCad.TabIndex = 19;
-            this.buttonSalvarCad.Text = "Salvar";
-            this.buttonSalvarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSalvarCad.UseVisualStyleBackColor = false;
-            this.buttonSalvarCad.Click += new System.EventHandler(this.buttonSalvarCad_Click);
-            // 
-            // buttonEditarCad
-            // 
-            this.buttonEditarCad.BackColor = System.Drawing.Color.Yellow;
-            this.buttonEditarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_edit_28;
-            this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
-            this.buttonEditarCad.Name = "buttonEditarCad";
-            this.buttonEditarCad.Size = new System.Drawing.Size(132, 63);
-            this.buttonEditarCad.TabIndex = 20;
-            this.buttonEditarCad.Text = "Editar";
-            this.buttonEditarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEditarCad.UseVisualStyleBackColor = false;
-            this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
-            // 
-            // buttonCancelarCad
-            // 
-            this.buttonCancelarCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonCancelarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_30;
-            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 356);
-            this.buttonCancelarCad.Name = "buttonCancelarCad";
-            this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
-            this.buttonCancelarCad.TabIndex = 22;
-            this.buttonCancelarCad.Text = "Cancelar";
-            this.buttonCancelarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancelarCad.UseVisualStyleBackColor = false;
-            this.buttonCancelarCad.Click += new System.EventHandler(this.buttonCancelarCad_Click);
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -499,19 +447,6 @@
             this.CbEstadoCad.Size = new System.Drawing.Size(121, 32);
             this.CbEstadoCad.TabIndex = 13;
             // 
-            // buttonExcluirCad
-            // 
-            this.buttonExcluirCad.BackColor = System.Drawing.Color.Red;
-            this.buttonExcluirCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_excluir_usuário_macho_30;
-            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 426);
-            this.buttonExcluirCad.Name = "buttonExcluirCad";
-            this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
-            this.buttonExcluirCad.TabIndex = 23;
-            this.buttonExcluirCad.Text = "Excluir";
-            this.buttonExcluirCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonExcluirCad.UseVisualStyleBackColor = false;
-            this.buttonExcluirCad.Click += new System.EventHandler(this.buttonExcluirCad_Click);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -560,6 +495,19 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Código";
             // 
+            // buttonExcluirCad
+            // 
+            this.buttonExcluirCad.BackColor = System.Drawing.Color.Red;
+            this.buttonExcluirCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_excluir_usuário_macho_30;
+            this.buttonExcluirCad.Location = new System.Drawing.Point(877, 426);
+            this.buttonExcluirCad.Name = "buttonExcluirCad";
+            this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
+            this.buttonExcluirCad.TabIndex = 23;
+            this.buttonExcluirCad.Text = "Excluir";
+            this.buttonExcluirCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExcluirCad.UseVisualStyleBackColor = false;
+            this.buttonExcluirCad.Click += new System.EventHandler(this.buttonExcluirCad_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroByte_Desktop.Properties.Resources.download__1_;
@@ -569,6 +517,58 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
+            // 
+            // buttonCancelarCad
+            // 
+            this.buttonCancelarCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonCancelarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_30;
+            this.buttonCancelarCad.Location = new System.Drawing.Point(876, 356);
+            this.buttonCancelarCad.Name = "buttonCancelarCad";
+            this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
+            this.buttonCancelarCad.TabIndex = 22;
+            this.buttonCancelarCad.Text = "Cancelar";
+            this.buttonCancelarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancelarCad.UseVisualStyleBackColor = false;
+            this.buttonCancelarCad.Click += new System.EventHandler(this.buttonCancelarCad_Click);
+            // 
+            // buttonEditarCad
+            // 
+            this.buttonEditarCad.BackColor = System.Drawing.Color.Yellow;
+            this.buttonEditarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_edit_28;
+            this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
+            this.buttonEditarCad.Name = "buttonEditarCad";
+            this.buttonEditarCad.Size = new System.Drawing.Size(132, 63);
+            this.buttonEditarCad.TabIndex = 20;
+            this.buttonEditarCad.Text = "Editar";
+            this.buttonEditarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditarCad.UseVisualStyleBackColor = false;
+            this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
+            // 
+            // buttonSalvarCad
+            // 
+            this.buttonSalvarCad.BackColor = System.Drawing.Color.Lime;
+            this.buttonSalvarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_salvar;
+            this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
+            this.buttonSalvarCad.Name = "buttonSalvarCad";
+            this.buttonSalvarCad.Size = new System.Drawing.Size(132, 60);
+            this.buttonSalvarCad.TabIndex = 19;
+            this.buttonSalvarCad.Text = "Salvar";
+            this.buttonSalvarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSalvarCad.UseVisualStyleBackColor = false;
+            this.buttonSalvarCad.Click += new System.EventHandler(this.buttonSalvarCad_Click);
+            // 
+            // buttonNovoCad
+            // 
+            this.buttonNovoCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonNovoCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo_arquivo_30;
+            this.buttonNovoCad.Location = new System.Drawing.Point(876, 155);
+            this.buttonNovoCad.Name = "buttonNovoCad";
+            this.buttonNovoCad.Size = new System.Drawing.Size(132, 57);
+            this.buttonNovoCad.TabIndex = 18;
+            this.buttonNovoCad.Text = "Novo";
+            this.buttonNovoCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNovoCad.UseVisualStyleBackColor = false;
+            this.buttonNovoCad.Click += new System.EventHandler(this.buttonNovoCad_Click);
             // 
             // fmlCadastro
             // 
@@ -623,7 +623,7 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmlCadastro";
-            this.Size = new System.Drawing.Size(1057, 721);
+            this.Size = new System.Drawing.Size(1284, 721);
             this.Load += new System.EventHandler(this.fmlCadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

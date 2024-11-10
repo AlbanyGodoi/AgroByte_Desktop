@@ -150,12 +150,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.dataGridViewRel);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.logoRelatorio);
             this.Controls.Add(this.panelLblRelat);
             this.Name = "RelatorioCadastros";
-            this.Size = new System.Drawing.Size(1290, 648);
+            this.Size = new System.Drawing.Size(1293, 648);
             this.panelLblRelat.ResumeLayout(false);
             this.panelLblRelat.PerformLayout();
             this.logoRelatorio.ResumeLayout(false);

@@ -31,6 +31,13 @@ namespace AgroByte_Desktop
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+
+            fmlCadastro1.Visible = false;
+            principal21.Visible = true;
+            relatorioCadastros1.Visible = false;
+            frmFuncionario1.Visible = false;
+
+
             principal21.BringToFront();
 
         }
@@ -47,15 +54,25 @@ namespace AgroByte_Desktop
 
         private void buttonCadastro_Click(object sender, EventArgs e)
         {
-            
-            fmlCadastro1.Show();
+            fmlCadastro1.Visible = true;
+            principal21.Visible = false;
+            relatorioCadastros1.Visible = false;
+            frmFuncionario1.Visible = false;
             fmlCadastro1.BringToFront();
+            //fmlCadastro1.Show();
+            //fmlCadastro1.BringToFront();
 
         }
 
         private void buttonFuncionario_Click(object sender, EventArgs e)
         {
-            frmFuncionario1.Show();
+
+            fmlCadastro1.Visible = false;
+            principal21.Visible = false;
+            relatorioCadastros1.Visible = false;
+            frmFuncionario1.Visible = true;
+            
+            //frmFuncionario1.Show();
             frmFuncionario1.BringToFront();
 
         }
@@ -67,12 +84,21 @@ namespace AgroByte_Desktop
 
         private void TelaInicial_Click(object sender, EventArgs e)
         {
-            
+            fmlCadastro1.Visible = false;
+            principal21.Visible = true;
+            relatorioCadastros1.Visible = false;
+            frmFuncionario1.Visible = false;
             principal21.BringToFront();
         }
 
         private void buttonRelatorio_Click(object sender, EventArgs e)
         {
+            fmlCadastro1.Visible = false;
+            principal21.Visible = false;
+            relatorioCadastros1.Visible = true;
+            frmFuncionario1.Visible = false;
+
+
             relatorioCadastros1.BringToFront();
         }
     }
