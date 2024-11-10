@@ -70,9 +70,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtPesquisacad = new System.Windows.Forms.TextBox();
             this.dataGridViewCad = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblcodcad = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -301,42 +301,54 @@
             // 
             // buttonNovoCad
             // 
+            this.buttonNovoCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonNovoCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_novo_arquivo_30;
             this.buttonNovoCad.Location = new System.Drawing.Point(876, 155);
             this.buttonNovoCad.Name = "buttonNovoCad";
             this.buttonNovoCad.Size = new System.Drawing.Size(132, 57);
             this.buttonNovoCad.TabIndex = 18;
             this.buttonNovoCad.Text = "Novo";
-            this.buttonNovoCad.UseVisualStyleBackColor = true;
+            this.buttonNovoCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNovoCad.UseVisualStyleBackColor = false;
             this.buttonNovoCad.Click += new System.EventHandler(this.buttonNovoCad_Click);
             // 
             // buttonSalvarCad
             // 
+            this.buttonSalvarCad.BackColor = System.Drawing.Color.Lime;
+            this.buttonSalvarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_salvar;
             this.buttonSalvarCad.Location = new System.Drawing.Point(876, 218);
             this.buttonSalvarCad.Name = "buttonSalvarCad";
             this.buttonSalvarCad.Size = new System.Drawing.Size(132, 60);
             this.buttonSalvarCad.TabIndex = 19;
             this.buttonSalvarCad.Text = "Salvar";
-            this.buttonSalvarCad.UseVisualStyleBackColor = true;
+            this.buttonSalvarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSalvarCad.UseVisualStyleBackColor = false;
             this.buttonSalvarCad.Click += new System.EventHandler(this.buttonSalvarCad_Click);
             // 
             // buttonEditarCad
             // 
+            this.buttonEditarCad.BackColor = System.Drawing.Color.Yellow;
+            this.buttonEditarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_edit_28;
             this.buttonEditarCad.Location = new System.Drawing.Point(876, 281);
             this.buttonEditarCad.Name = "buttonEditarCad";
             this.buttonEditarCad.Size = new System.Drawing.Size(132, 63);
             this.buttonEditarCad.TabIndex = 20;
             this.buttonEditarCad.Text = "Editar";
-            this.buttonEditarCad.UseVisualStyleBackColor = true;
+            this.buttonEditarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditarCad.UseVisualStyleBackColor = false;
             this.buttonEditarCad.Click += new System.EventHandler(this.buttonEditarCad_Click);
             // 
             // buttonCancelarCad
             // 
+            this.buttonCancelarCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonCancelarCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_cancelar_30;
             this.buttonCancelarCad.Location = new System.Drawing.Point(876, 356);
             this.buttonCancelarCad.Name = "buttonCancelarCad";
             this.buttonCancelarCad.Size = new System.Drawing.Size(132, 54);
             this.buttonCancelarCad.TabIndex = 22;
             this.buttonCancelarCad.Text = "Cancelar";
-            this.buttonCancelarCad.UseVisualStyleBackColor = true;
+            this.buttonCancelarCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancelarCad.UseVisualStyleBackColor = false;
             this.buttonCancelarCad.Click += new System.EventHandler(this.buttonCancelarCad_Click);
             // 
             // label18
@@ -489,12 +501,15 @@
             // 
             // buttonExcluirCad
             // 
+            this.buttonExcluirCad.BackColor = System.Drawing.Color.Red;
+            this.buttonExcluirCad.Image = global::AgroByte_Desktop.Properties.Resources.icons8_excluir_usuário_macho_30;
             this.buttonExcluirCad.Location = new System.Drawing.Point(877, 426);
             this.buttonExcluirCad.Name = "buttonExcluirCad";
             this.buttonExcluirCad.Size = new System.Drawing.Size(131, 59);
             this.buttonExcluirCad.TabIndex = 23;
             this.buttonExcluirCad.Text = "Excluir";
-            this.buttonExcluirCad.UseVisualStyleBackColor = true;
+            this.buttonExcluirCad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExcluirCad.UseVisualStyleBackColor = false;
             this.buttonExcluirCad.Click += new System.EventHandler(this.buttonExcluirCad_Click);
             // 
             // label21
@@ -528,16 +543,6 @@
             this.dataGridViewCad.DoubleClick += new System.EventHandler(this.dataGridViewCad_DoubleClick);
             this.dataGridViewCad.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCad_MouseDoubleClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AgroByte_Desktop.Properties.Resources.download__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblcodcad
             // 
             this.lblcodcad.AutoSize = true;
@@ -554,6 +559,16 @@
             this.label1.Size = new System.Drawing.Size(66, 24);
             this.label1.TabIndex = 53;
             this.label1.Text = "Código";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AgroByte_Desktop.Properties.Resources.download__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
             // 
             // fmlCadastro
             // 

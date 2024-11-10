@@ -47,12 +47,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUsuariologado = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonDeletar = new System.Windows.Forms.Button();
             this.buttonCancelarFunc = new System.Windows.Forms.Button();
             this.buttonExcluirFunc = new System.Windows.Forms.Button();
             this.buttonEditarFunc = new System.Windows.Forms.Button();
             this.buttonSalvarFunc = new System.Windows.Forms.Button();
             this.buttonNovoFunc = new System.Windows.Forms.Button();
-            this.buttonDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFunc)).BeginInit();
             this.groupBoxPesquisaFunc.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -269,6 +269,19 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Usuário Logado:";
             // 
+            // buttonDeletar
+            // 
+            this.buttonDeletar.BackColor = System.Drawing.Color.Red;
+            this.buttonDeletar.Image = global::AgroByte_Desktop.Properties.Resources.icons8_excluir_usuário_macho_30;
+            this.buttonDeletar.Location = new System.Drawing.Point(892, 639);
+            this.buttonDeletar.Name = "buttonDeletar";
+            this.buttonDeletar.Size = new System.Drawing.Size(227, 72);
+            this.buttonDeletar.TabIndex = 22;
+            this.buttonDeletar.Text = "Excluir";
+            this.buttonDeletar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDeletar.UseVisualStyleBackColor = false;
+            this.buttonDeletar.Click += new System.EventHandler(this.buttonDeletar_Click);
+            // 
             // buttonCancelarFunc
             // 
             this.buttonCancelarFunc.AutoSize = true;
@@ -344,16 +357,6 @@
             this.buttonNovoFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonNovoFunc.UseVisualStyleBackColor = false;
             this.buttonNovoFunc.Click += new System.EventHandler(this.buttonNovoFunc_Click);
-            // 
-            // buttonDeletar
-            // 
-            this.buttonDeletar.Location = new System.Drawing.Point(892, 639);
-            this.buttonDeletar.Name = "buttonDeletar";
-            this.buttonDeletar.Size = new System.Drawing.Size(227, 72);
-            this.buttonDeletar.TabIndex = 22;
-            this.buttonDeletar.Text = "Excluir";
-            this.buttonDeletar.UseVisualStyleBackColor = true;
-            this.buttonDeletar.Click += new System.EventHandler(this.buttonDeletar_Click);
             // 
             // frmFuncionario
             // 

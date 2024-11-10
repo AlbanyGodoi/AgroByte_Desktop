@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.relatorioCadastros1 = new AgroByte_Desktop.RelatorioCadastros();
+            this.fmlCadastro1 = new AgroByte_Desktop.fmlCadastro();
+            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
+            this.principal21 = new AgroByte_Desktop.principal2();
             this.TelaInicial = new System.Windows.Forms.Button();
             this.buttonSairAplic1 = new System.Windows.Forms.Button();
             this.buttonRelatorio = new System.Windows.Forms.Button();
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.buttonFuncionario = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.fmlCadastro1 = new AgroByte_Desktop.fmlCadastro();
-            this.frmFuncionario1 = new AgroByte_Desktop.frmFuncionario();
-            this.principal21 = new AgroByte_Desktop.principal2();
-            this.relatorioCadastros1 = new AgroByte_Desktop.RelatorioCadastros();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,12 +59,60 @@
             this.panelMenu.Size = new System.Drawing.Size(220, 884);
             this.panelMenu.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.relatorioCadastros1);
+            this.panel1.Controls.Add(this.fmlCadastro1);
+            this.panel1.Controls.Add(this.frmFuncionario1);
+            this.panel1.Controls.Add(this.principal21);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(220, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1097, 884);
+            this.panel1.TabIndex = 1;
+            // 
+            // relatorioCadastros1
+            // 
+            this.relatorioCadastros1.Location = new System.Drawing.Point(0, 0);
+            this.relatorioCadastros1.Name = "relatorioCadastros1";
+            this.relatorioCadastros1.Size = new System.Drawing.Size(1290, 648);
+            this.relatorioCadastros1.TabIndex = 3;
+            // 
+            // fmlCadastro1
+            // 
+            this.fmlCadastro1.AutoSize = true;
+            this.fmlCadastro1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmlCadastro1.Location = new System.Drawing.Point(0, 0);
+            this.fmlCadastro1.Margin = new System.Windows.Forms.Padding(4);
+            this.fmlCadastro1.Name = "fmlCadastro1";
+            this.fmlCadastro1.Size = new System.Drawing.Size(1057, 721);
+            this.fmlCadastro1.TabIndex = 2;
+            // 
+            // frmFuncionario1
+            // 
+            this.frmFuncionario1.AutoSize = true;
+            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frmFuncionario1.Location = new System.Drawing.Point(0, 0);
+            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.frmFuncionario1.Name = "frmFuncionario1";
+            this.frmFuncionario1.Size = new System.Drawing.Size(1125, 714);
+            this.frmFuncionario1.TabIndex = 1;
+            // 
+            // principal21
+            // 
+            this.principal21.AutoSize = true;
+            this.principal21.Location = new System.Drawing.Point(0, 0);
+            this.principal21.Margin = new System.Windows.Forms.Padding(4);
+            this.principal21.Name = "principal21";
+            this.principal21.Size = new System.Drawing.Size(1110, 965);
+            this.principal21.TabIndex = 0;
+            // 
             // TelaInicial
             // 
             this.TelaInicial.BackColor = System.Drawing.Color.Green;
             this.TelaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelaInicial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.TelaInicial.Image = global::AgroByte_Desktop.Properties.Resources.icons8_graph_report_28;
+            this.TelaInicial.Image = global::AgroByte_Desktop.Properties.Resources.icons8_tela_inicial_30__1_;
             this.TelaInicial.Location = new System.Drawing.Point(6, 347);
             this.TelaInicial.Name = "TelaInicial";
             this.TelaInicial.Size = new System.Drawing.Size(214, 40);
@@ -145,54 +193,6 @@
             this.panelLogo.Size = new System.Drawing.Size(220, 171);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.relatorioCadastros1);
-            this.panel1.Controls.Add(this.fmlCadastro1);
-            this.panel1.Controls.Add(this.frmFuncionario1);
-            this.panel1.Controls.Add(this.principal21);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(220, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1097, 884);
-            this.panel1.TabIndex = 1;
-            // 
-            // fmlCadastro1
-            // 
-            this.fmlCadastro1.AutoSize = true;
-            this.fmlCadastro1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmlCadastro1.Location = new System.Drawing.Point(0, 0);
-            this.fmlCadastro1.Margin = new System.Windows.Forms.Padding(4);
-            this.fmlCadastro1.Name = "fmlCadastro1";
-            this.fmlCadastro1.Size = new System.Drawing.Size(1057, 721);
-            this.fmlCadastro1.TabIndex = 2;
-            // 
-            // frmFuncionario1
-            // 
-            this.frmFuncionario1.AutoSize = true;
-            this.frmFuncionario1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frmFuncionario1.Location = new System.Drawing.Point(0, 0);
-            this.frmFuncionario1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.frmFuncionario1.Name = "frmFuncionario1";
-            this.frmFuncionario1.Size = new System.Drawing.Size(1125, 714);
-            this.frmFuncionario1.TabIndex = 1;
-            // 
-            // principal21
-            // 
-            this.principal21.AutoSize = true;
-            this.principal21.Location = new System.Drawing.Point(0, 0);
-            this.principal21.Margin = new System.Windows.Forms.Padding(4);
-            this.principal21.Name = "principal21";
-            this.principal21.Size = new System.Drawing.Size(1110, 965);
-            this.principal21.TabIndex = 0;
-            // 
-            // relatorioCadastros1
-            // 
-            this.relatorioCadastros1.Location = new System.Drawing.Point(0, 0);
-            this.relatorioCadastros1.Name = "relatorioCadastros1";
-            this.relatorioCadastros1.Size = new System.Drawing.Size(1290, 648);
-            this.relatorioCadastros1.TabIndex = 3;
             // 
             // frmMenu
             // 

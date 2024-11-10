@@ -416,5 +416,20 @@
   <ItemGroup>
     <None Include="Resources\icons8-novo-arquivo-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-relatório-gráfico-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-xls-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pdf-2-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-excluir-usuário-macho-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tela-inicial-30 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
