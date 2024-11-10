@@ -36,6 +36,7 @@
             this.buttonGerarRel = new System.Windows.Forms.Button();
             this.dataGridViewRel = new System.Windows.Forms.DataGridView();
             this.buttonExpRel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelLblRelat.SuspendLayout();
             this.logoRelatorio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,6 +46,7 @@
             // panelLblRelat
             // 
             this.panelLblRelat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelLblRelat.Controls.Add(this.button1);
             this.panelLblRelat.Controls.Add(this.buttonExpRel);
             this.panelLblRelat.Controls.Add(this.buttonGerarRel);
             this.panelLblRelat.Controls.Add(this.label1);
@@ -99,7 +101,7 @@
             this.buttonGerarRel.ForeColor = System.Drawing.Color.Transparent;
             this.buttonGerarRel.Location = new System.Drawing.Point(6, 3);
             this.buttonGerarRel.Name = "buttonGerarRel";
-            this.buttonGerarRel.Size = new System.Drawing.Size(190, 56);
+            this.buttonGerarRel.Size = new System.Drawing.Size(190, 46);
             this.buttonGerarRel.TabIndex = 1;
             this.buttonGerarRel.Text = "Gerar Relatório";
             this.buttonGerarRel.UseVisualStyleBackColor = false;
@@ -119,13 +121,25 @@
             // 
             this.buttonExpRel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.buttonExpRel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExpRel.Location = new System.Drawing.Point(6, 65);
+            this.buttonExpRel.Location = new System.Drawing.Point(6, 51);
             this.buttonExpRel.Name = "buttonExpRel";
-            this.buttonExpRel.Size = new System.Drawing.Size(190, 63);
+            this.buttonExpRel.Size = new System.Drawing.Size(190, 40);
             this.buttonExpRel.TabIndex = 2;
-            this.buttonExpRel.Text = "Exportar ";
+            this.buttonExpRel.Text = "Exportar -XLS";
             this.buttonExpRel.UseVisualStyleBackColor = false;
             this.buttonExpRel.Click += new System.EventHandler(this.buttonExpRel_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(7, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(189, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Exportar -PDF";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // RelatorioCadastros
             // 
@@ -156,5 +170,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonExpRel;
         private System.Windows.Forms.DataGridView dataGridViewRel;
+        private System.Windows.Forms.Button button1;
     }
 }
